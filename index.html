@@ -40,7 +40,7 @@
   --fm:'Geist Mono',ui-monospace,monospace;
 
   /* Layout */
-  --sb-w:272px;
+  --sb-w:288px;
   --ctx-w:352px;
 
   /* Safe areas */
@@ -130,7 +130,7 @@
 
 /* ── BASE ── */
 html,body{height:100%;height:-webkit-fill-available}
-body{width:100%;background:var(--bg);color:var(--tx);font-family:var(--ff);font-size:15px;line-height:1.65;overflow:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;transition:background .3s,color .3s}
+body{width:100%;background:var(--bg);color:var(--tx);font-family:var(--ff);font-size:16px;line-height:1.7;overflow:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;transition:background .3s,color .3s}
 #app{display:flex;width:100%;height:100%;padding-left:var(--sal);padding-right:var(--sar);overflow:hidden}
 
 /* focus ring */
@@ -143,20 +143,20 @@ body{width:100%;background:var(--bg);color:var(--tx);font-family:var(--ff);font-
 .sb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.42);z-index:49;opacity:0;transition:opacity var(--panel-dur)}
 .sb-overlay.show{opacity:1}
 
-/* Sidebar head — more breathing room */
-.sb-head{padding:var(--sp4) var(--sp3);padding-top:calc(var(--sp4) + var(--sat));border-bottom:1px solid var(--br);display:flex;align-items:center;gap:var(--sp2);flex-shrink:0;min-height:60px}
+/* Sidebar head */
+.sb-head{padding:var(--sp4) var(--sp3);padding-top:calc(var(--sp4) + var(--sat));border-bottom:1px solid var(--br);display:flex;align-items:center;gap:var(--sp2);flex-shrink:0;min-height:64px}
 .logo-mark{display:flex;align-items:center;gap:var(--sp2);flex:1;cursor:pointer;padding:var(--sp1) var(--sp2);border-radius:var(--r2);transition:background var(--ease);min-width:0}
 .logo-mark:hover{background:var(--sf2)}
-.logo-name{font-size:12px;font-weight:700;letter-spacing:5px;color:var(--tx);line-height:1;text-transform:uppercase}
-.logo-sub{font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--tx3);margin-top:3px;font-weight:400}
+.logo-name{font-size:13px;font-weight:700;letter-spacing:5px;color:var(--tx);line-height:1;text-transform:uppercase}
+.logo-sub{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--tx3);margin-top:3px;font-weight:400}
 
-.ic-btn{width:32px;height:32px;border:1px solid var(--br);border-radius:var(--r2);background:transparent;color:var(--tx2);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--ease);flex-shrink:0}
+.ic-btn{width:34px;height:34px;border:1px solid var(--br);border-radius:var(--r2);background:transparent;color:var(--tx2);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--ease);flex-shrink:0}
 .ic-btn:hover{background:var(--sf2);color:var(--tx);border-color:var(--br2)}
-.sb-close{width:32px;height:32px;border:none;background:transparent;color:var(--tx2);cursor:pointer;display:none;align-items:center;justify-content:center;border-radius:var(--r2);flex-shrink:0;transition:background var(--ease)}
+.sb-close{width:34px;height:34px;border:none;background:transparent;color:var(--tx2);cursor:pointer;display:none;align-items:center;justify-content:center;border-radius:var(--r2);flex-shrink:0;transition:background var(--ease)}
 .sb-close:hover{background:var(--sf2)}
 
-/* New Chat — stronger, more intentional */
-.sb-new{margin:var(--sp3) var(--sp3) var(--sp2);padding:var(--sp3) var(--sp4);background:var(--gd-l);border:1px solid var(--gd-b);border-radius:var(--r3);color:var(--gd);font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:var(--sp2);font-family:var(--ff);min-height:42px;transition:all var(--ease);letter-spacing:.1px}
+/* New Chat */
+.sb-new{margin:var(--sp3) var(--sp3) var(--sp2);padding:var(--sp3) var(--sp4);background:var(--gd-l);border:1px solid var(--gd-b);border-radius:var(--r3);color:var(--gd);font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:var(--sp2);font-family:var(--ff);min-height:46px;transition:all var(--ease);letter-spacing:.1px}
 .sb-new:hover{background:rgba(196,144,46,.14);border-color:var(--gd-m)}
 
 .sb-scr{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:var(--sp3)}
@@ -164,34 +164,32 @@ body{width:100%;background:var(--bg);color:var(--tx);font-family:var(--ff);font-
 .sb-scr::-webkit-scrollbar-thumb{background:var(--br2);border-radius:1px}
 
 /* Section labels */
-.sb-lbl{padding:var(--sp4) var(--sp4) var(--sp1);font-size:9.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--tx3)}
+.sb-lbl{padding:var(--sp4) var(--sp4) var(--sp2);font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--tx3)}
 
-/* Nav rows — left accent active state */
-.sb-row{display:flex;align-items:center;gap:var(--sp2);padding:var(--sp2) var(--sp4);cursor:pointer;color:var(--tx2);font-size:13px;min-height:38px;transition:all var(--ease);user-select:none;border-left:2px solid transparent;position:relative}
+/* Nav rows */
+.sb-row{display:flex;align-items:center;gap:var(--sp3);padding:var(--sp2) var(--sp4);cursor:pointer;color:var(--tx2);font-size:14px;min-height:42px;transition:all var(--ease);user-select:none;border-left:2px solid transparent;position:relative}
 .sb-row:hover{background:var(--sf2);color:var(--tx);border-left-color:var(--br2)}
-.sb-row.act{color:var(--tx);font-weight:500;background:var(--sb-active-bg);border-left-color:var(--gd)}
+.sb-row.act{color:var(--tx);font-weight:600;background:var(--sb-active-bg);border-left-color:var(--gd)}
 .sb-row.act svg{color:var(--gd)}
 
-/* Specialist folder */
-.sb-spec-folder{display:flex;align-items:center;gap:var(--sp2);padding:var(--sp2) var(--sp4);cursor:pointer;color:var(--tx2);font-size:13px;min-height:38px;transition:all var(--ease);border-left:2px solid transparent}
-.sb-spec-folder:hover{background:var(--sf2);color:var(--tx);border-left-color:var(--br2)}
-.sb-spec-folder-chev{margin-left:auto;transition:transform .22s;color:var(--tx3);flex-shrink:0}
-.sb-spec-folder.open .sb-spec-folder-chev{transform:rotate(90deg)}
-.sb-spec-inner{display:none;padding:0 0 var(--sp1) 0}
-.sb-spec-inner.show{display:block}
-.sb-pinned-item{display:flex;align-items:center;gap:var(--sp2);padding:6px var(--sp3) 6px 30px;cursor:pointer;font-size:12.5px;color:var(--tx2);min-height:34px;transition:all var(--ease)}
-.sb-pinned-item:hover{background:var(--sf2);color:var(--tx)}
-.sb-pinned-item.act{color:var(--gd);font-weight:500}
-.sb-pinned-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
-.sb-browse-btn{display:flex;align-items:center;gap:var(--sp2);padding:7px var(--sp3) 7px 30px;cursor:pointer;font-size:12px;color:var(--gd);font-weight:500;transition:color var(--ease)}
+/* Specialist items — flat list, always visible */
+.sb-spec-item{display:flex;align-items:center;gap:var(--sp3);padding:var(--sp2) var(--sp4);cursor:pointer;font-size:13.5px;color:var(--tx2);min-height:42px;transition:all var(--ease);border-left:2px solid transparent}
+.sb-spec-item:hover{background:var(--sf2);color:var(--tx);border-left-color:var(--br2)}
+.sb-spec-item.act{color:var(--tx);font-weight:600;background:var(--sb-active-bg);border-left-color:var(--gd)}
+.sb-spec-item.act .sb-spec-dot{transform:scale(1.3)}
+.sb-spec-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.sb-spec-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sb-spec-role{font-size:11px;color:var(--tx3);white-space:nowrap;flex-shrink:0}
+.sb-browse-btn{display:flex;align-items:center;gap:var(--sp2);padding:var(--sp2) var(--sp4);cursor:pointer;font-size:13px;color:var(--gd);font-weight:500;transition:color var(--ease);min-height:38px}
 .sb-browse-btn:hover{color:var(--tx)}
 
-/* Sidebar footer — cleaner, no demo text */
-.sb-ft{padding:var(--sp3);padding-bottom:calc(var(--sp3) + var(--sab));border-top:1px solid var(--br);display:flex;align-items:center;gap:var(--sp2);flex-shrink:0}
-.sb-av{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--gd-l),var(--sf3));border:1px solid var(--gd-b);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.sb-ft-info{flex:1;min-width:0}
-.sb-ft-name{font-size:12.5px;font-weight:600;line-height:1.2;color:var(--tx)}
-.sb-ft-meta{font-size:10px;color:var(--tx3);margin-top:1px;letter-spacing:.2px}
+/* Sidebar footer */
+.sb-ft{padding:var(--sp3) var(--sp4);padding-bottom:calc(var(--sp3) + var(--sab));border-top:1px solid var(--br);display:flex;align-items:center;gap:var(--sp3);flex-shrink:0;min-height:60px}
+.sb-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gd-l),var(--sf3));border:1px solid var(--gd-b);display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer;transition:all var(--ease)}
+.sb-av:hover{background:var(--gd-l);border-color:var(--gd)}
+.sb-ft-info{flex:1;min-width:0;cursor:pointer}
+.sb-ft-name{font-size:13.5px;font-weight:600;line-height:1.2;color:var(--tx)}
+.sb-ft-meta{font-size:11px;color:var(--tx3);margin-top:2px;letter-spacing:.2px}
 
 /* ══════════════════════════════════════
    MAIN + TOP BAR
@@ -236,7 +234,7 @@ body{width:100%;background:var(--bg);color:var(--tx);font-family:var(--ff);font-
 .inbox{width:100%;background:var(--inp-bg);border:1px solid var(--inp-bd);border-radius:var(--r6);box-shadow:var(--sh-md);overflow:hidden;transition:border-color var(--ease),box-shadow var(--ease)}
 .inbox:focus-within{border-color:rgba(196,144,46,.4);box-shadow:0 0 0 3px rgba(196,144,46,.08),var(--sh-md)}
 .in-top{display:flex;align-items:flex-end;gap:var(--sp2);padding:var(--sp4) var(--sp3) var(--sp3) var(--sp4)}
-.ta{flex:1;background:transparent;border:none;outline:none;color:var(--tx);font-size:15px;font-family:var(--ff);resize:none;min-height:24px;max-height:140px;line-height:1.6;-webkit-appearance:none;font-weight:400}
+.ta{flex:1;background:transparent;border:none;outline:none;color:var(--tx);font-size:15.5px;font-family:var(--ff);resize:none;min-height:26px;max-height:140px;line-height:1.65;-webkit-appearance:none;font-weight:400}
 .ta::placeholder{color:var(--tx3);font-weight:400}
 
 /* Bottom row of composer */
@@ -322,34 +320,34 @@ body{width:100%;background:var(--bg);color:var(--tx);font-family:var(--ff);font-
 @keyframes spin{to{transform:rotate(360deg)}}
 
 /* Message layout */
-.msg{display:flex;gap:var(--sp2);max-width:88%}
+.msg{display:flex;gap:var(--sp3);max-width:88%}
 .msg.u{flex-direction:row-reverse;align-self:flex-end;max-width:74%}
 .msg.a{align-self:flex-start;max-width:88%}
 
 /* Avatar */
-.m-av{width:28px;height:28px;border-radius:var(--r2);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px;border:1px solid var(--br)}
+.m-av{width:30px;height:30px;border-radius:var(--r2);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px;border:1px solid var(--br)}
 
 /* Message body */
 .m-body{display:flex;flex-direction:column;gap:var(--sp1);min-width:0}
 
 /* Bubbles */
-.m-bbl{padding:var(--sp3) var(--sp4);border-radius:var(--r5);font-size:14.5px;line-height:1.78;word-break:break-word;-webkit-user-select:text;user-select:text}
+.m-bbl{padding:var(--sp4) var(--sp5);border-radius:var(--r5);font-size:15px;line-height:1.8;word-break:break-word;-webkit-user-select:text;user-select:text}
 .msg.u .m-bbl{background:var(--user-bg);color:var(--user-tx);border-bottom-right-radius:var(--r1);backdrop-filter:blur(2px)}
 .msg.a .m-bbl{background:var(--ai-bg);color:var(--tx);border-bottom-left-radius:var(--r1);border:1px solid var(--ai-bd)}
 
-/* Timestamp — quieter */
-.m-time{font-size:8.5px;color:var(--tx3);padding:0 var(--sp1);font-family:var(--fm);letter-spacing:.3px;opacity:.7}
+/* Timestamp */
+.m-time{font-size:9.5px;color:var(--tx3);padding:0 var(--sp1);font-family:var(--fm);letter-spacing:.3px;opacity:.7}
 .msg.u .m-time{text-align:right}
 
 /* Source badge */
-.src-badge{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border:1px solid var(--br);border-radius:20px;font-size:11.5px;color:var(--tx3);cursor:pointer;background:transparent;transition:all var(--ease);font-family:var(--ff);margin-top:3px;letter-spacing:.1px}
+.src-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border:1px solid var(--br);border-radius:20px;font-size:12px;color:var(--tx3);cursor:pointer;background:transparent;transition:all var(--ease);font-family:var(--ff);margin-top:3px;letter-spacing:.1px}
 .src-badge:hover{border-color:var(--gd-b);color:var(--gd);background:var(--gd-l)}
-.src-dot{width:4px;height:4px;border-radius:50%;background:var(--gn);display:inline-block}
+.src-dot{width:5px;height:5px;border-radius:50%;background:var(--gn);display:inline-block}
 
-/* Follow-ups — horizontal scroll row, not vertical stack */
+/* Follow-ups */
 .followups{margin-top:var(--sp2);display:flex;gap:var(--sp2);overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
 .followups::-webkit-scrollbar{height:0}
-.fup{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--br);border-radius:20px;font-size:12.5px;color:var(--tx2);cursor:pointer;background:var(--sf);transition:all var(--ease);text-align:left;font-family:var(--ff);white-space:nowrap;flex-shrink:0;min-height:32px}
+.fup{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border:1px solid var(--br);border-radius:20px;font-size:13px;color:var(--tx2);cursor:pointer;background:var(--sf);transition:all var(--ease);text-align:left;font-family:var(--ff);white-space:nowrap;flex-shrink:0;min-height:34px}
 .fup:hover{border-color:var(--gd-b);color:var(--gd);background:var(--gd-l)}
 
 /* Message actions */
@@ -381,7 +379,7 @@ body{width:100%;background:var(--bg);color:var(--tx);font-family:var(--ff);font-
    ══════════════════════════════════════ */
 .tool-strip{display:flex;gap:5px;overflow-x:auto;max-width:740px;width:100%;padding:6px 0 4px;scrollbar-width:none}
 .tool-strip::-webkit-scrollbar{height:0}
-.tool-btn{display:inline-flex;align-items:center;gap:4px;white-space:nowrap;padding:4px 10px;border:1px solid var(--br);border-radius:20px;font-size:11.5px;color:var(--tx2);cursor:pointer;background:transparent;transition:all var(--ease);font-family:var(--ff);flex-shrink:0;min-height:26px;letter-spacing:.1px}
+.tool-btn{display:inline-flex;align-items:center;gap:4px;white-space:nowrap;padding:5px 12px;border:1px solid var(--br);border-radius:20px;font-size:12px;color:var(--tx2);cursor:pointer;background:transparent;transition:all var(--ease);font-family:var(--ff);flex-shrink:0;min-height:30px;letter-spacing:.1px}
 .tool-btn:hover{border-color:var(--gd-b);color:var(--gd);background:var(--gd-l)}
 .tool-btn.widget{border-style:dashed;color:var(--tx3)}
 .tool-btn.widget:hover{border-style:solid;border-color:var(--gd-b);color:var(--gd);background:var(--gd-l)}
@@ -669,6 +667,620 @@ body{width:100%;background:var(--bg);color:var(--tx);font-family:var(--ff);font-
   .lib-overlay{align-items:center;padding-bottom:0}
   .lib-drawer{border-radius:var(--r7);max-height:82vh;margin:0 auto}
 }
+
+/* ══════════════════════════════════════
+   PHASE 3 — RICH RESPONSE COMPONENTS
+   ══════════════════════════════════════ */
+
+/* ── Summary Block ── */
+.resp-summary{
+  background:var(--gd-l);
+  border:1px solid var(--gd-b);
+  border-radius:var(--r4);
+  padding:var(--sp3) var(--sp4);
+  margin-bottom:var(--sp3);
+  display:flex;
+  gap:var(--sp3);
+  align-items:flex-start;
+}
+.resp-summary-icon{
+  font-size:16px;
+  flex-shrink:0;
+  margin-top:1px;
+}
+.resp-summary-body{}
+.resp-summary-label{
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  color:var(--gd);
+  margin-bottom:3px;
+}
+.resp-summary-text{
+  font-size:13.5px;
+  font-weight:500;
+  color:var(--tx);
+  line-height:1.55;
+}
+
+/* ── Expandable Sections ── */
+.exp-group{
+  border:1px solid var(--br);
+  border-radius:var(--r4);
+  overflow:hidden;
+  margin-bottom:var(--sp3);
+}
+.exp-section{
+  border-bottom:1px solid var(--br);
+}
+.exp-section:last-child{
+  border-bottom:none;
+}
+.exp-hdr{
+  display:flex;
+  align-items:center;
+  gap:var(--sp2);
+  padding:var(--sp2) var(--sp4);
+  cursor:pointer;
+  background:var(--sf2);
+  font-size:12.5px;
+  font-weight:600;
+  color:var(--tx);
+  min-height:40px;
+  transition:background var(--ease);
+  user-select:none;
+}
+.exp-hdr:hover{background:var(--sf3)}
+.exp-hdr-icon{font-size:13px;flex-shrink:0}
+.exp-hdr-label{flex:1}
+.exp-hdr-meta{
+  font-size:10px;
+  color:var(--tx3);
+  font-weight:400;
+  margin-right:var(--sp1);
+}
+.exp-chev{
+  color:var(--tx3);
+  flex-shrink:0;
+  transition:transform .2s;
+}
+.exp-hdr.open .exp-chev{
+  transform:rotate(90deg);
+}
+.exp-body{
+  display:none;
+  padding:var(--sp3) var(--sp4);
+  font-size:13px;
+  line-height:1.65;
+  color:var(--tx2);
+  background:var(--sf);
+  border-top:1px solid var(--br);
+}
+.exp-body.show{display:block}
+
+/* ── Phase 3 Checklist ── */
+.p3-checklist{
+  display:flex;
+  flex-direction:column;
+  gap:var(--sp1);
+}
+.p3-cl-item{
+  display:flex;
+  align-items:flex-start;
+  gap:var(--sp2);
+  padding:5px 0;
+  cursor:pointer;
+  border-bottom:1px solid var(--br);
+  transition:opacity .15s;
+}
+.p3-cl-item:last-child{border-bottom:none}
+.p3-cl-item.checked{opacity:.55}
+.p3-cl-item.checked .p3-cl-text{text-decoration:line-through;color:var(--tx3)}
+.p3-cl-box{
+  width:17px;height:17px;
+  border-radius:var(--r1);
+  border:1.5px solid var(--br2);
+  flex-shrink:0;
+  margin-top:1px;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .15s;
+}
+.p3-cl-item.checked .p3-cl-box{
+  background:var(--gn);
+  border-color:var(--gn);
+}
+.p3-cl-text{font-size:13px;color:var(--tx);line-height:1.45}
+.p3-cl-sub{font-size:11px;color:var(--tx3);margin-top:1px}
+
+/* ── Phase 3 Fee Table ── */
+.p3-fee-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:12.5px;
+}
+.p3-fee-table tr{
+  border-bottom:1px solid var(--br);
+}
+.p3-fee-table tr:last-child{border-bottom:none}
+.p3-fee-table td{
+  padding:7px 0;
+  color:var(--tx);
+  vertical-align:top;
+}
+.p3-fee-table td:last-child{
+  text-align:right;
+  font-weight:600;
+  color:var(--gd);
+  white-space:nowrap;
+}
+.p3-fee-note{
+  font-size:10px;
+  color:var(--tx3);
+  margin-top:var(--sp2);
+  font-style:italic;
+}
+
+/* ── Phase 3 Timeline ── */
+.p3-timeline{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  padding:var(--sp2) 0;
+}
+.p3-tl-node{
+  display:flex;
+  gap:var(--sp3);
+  position:relative;
+  padding-bottom:var(--sp3);
+}
+.p3-tl-node:last-child{padding-bottom:0}
+.p3-tl-left{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  flex-shrink:0;
+  width:24px;
+}
+.p3-tl-dot{
+  width:20px;height:20px;
+  border-radius:50%;
+  background:var(--gd-l);
+  border:1.5px solid var(--gd);
+  display:flex;align-items:center;justify-content:center;
+  font-size:9px;font-weight:700;color:var(--gd);
+  flex-shrink:0;
+  z-index:1;
+}
+.p3-tl-line{
+  flex:1;
+  width:1px;
+  background:var(--br2);
+  margin-top:4px;
+}
+.p3-tl-node:last-child .p3-tl-line{display:none}
+.p3-tl-content{flex:1;padding-top:1px}
+.p3-tl-title{
+  font-size:13px;font-weight:600;color:var(--tx);
+  line-height:1.3;
+  margin-bottom:2px;
+}
+.p3-tl-desc{
+  font-size:12px;color:var(--tx2);
+  line-height:1.5;
+}
+.p3-tl-meta{
+  font-size:10.5px;
+  color:var(--gd);
+  font-weight:600;
+  margin-top:3px;
+}
+
+/* ── Phase 3 Comparison Block ── */
+.p3-comparison{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:var(--sp2);
+  margin:var(--sp2) 0;
+}
+.p3-cmp-col{
+  background:var(--sf2);
+  border:1px solid var(--br);
+  border-radius:var(--r3);
+  overflow:hidden;
+}
+.p3-cmp-hdr{
+  padding:var(--sp2) var(--sp3);
+  background:var(--sf3);
+  border-bottom:1px solid var(--br);
+  font-size:11px;font-weight:700;
+  letter-spacing:.5px;text-transform:uppercase;
+  color:var(--tx2);
+}
+.p3-cmp-hdr.positive{color:var(--gn)}
+.p3-cmp-hdr.negative{color:var(--rd)}
+.p3-cmp-body{padding:var(--sp2) var(--sp3)}
+.p3-cmp-item{
+  font-size:12.5px;color:var(--tx);
+  padding:4px 0;
+  border-bottom:1px solid var(--br);
+  display:flex;align-items:flex-start;gap:var(--sp1);
+  line-height:1.4;
+}
+.p3-cmp-item:last-child{border-bottom:none}
+.p3-cmp-item svg{flex-shrink:0;margin-top:3px}
+
+/* ── Warning Box ── */
+.p3-warning{
+  display:flex;
+  gap:var(--sp2);
+  padding:var(--sp2) var(--sp3);
+  border-radius:var(--r3);
+  margin:var(--sp2) 0;
+  font-size:12.5px;
+  line-height:1.5;
+  border:1px solid;
+}
+.p3-warning.warn{background:rgba(224,170,48,.1);border-color:rgba(224,170,48,.35);color:var(--tx)}
+.p3-warning.danger{background:rgba(224,82,82,.08);border-color:rgba(224,82,82,.3);color:var(--tx)}
+.p3-warning.tip{background:var(--gd-l);border-color:var(--gd-b);color:var(--tx)}
+.p3-warning.info{background:rgba(88,152,204,.1);border-color:rgba(88,152,204,.3);color:var(--tx)}
+.p3-warn-icon{font-size:14px;flex-shrink:0;margin-top:1px}
+.p3-warn-body{}
+.p3-warn-title{font-weight:700;font-size:11.5px;letter-spacing:.2px;margin-bottom:2px}
+
+/* ── Assumption Pills ── */
+.p3-assumptions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:var(--sp1);
+  margin:var(--sp2) 0 var(--sp3);
+}
+.p3-assumption{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  padding:3px var(--sp2);
+  background:var(--sf2);
+  border:1px solid var(--br);
+  border-radius:20px;
+  font-size:11px;
+  color:var(--tx2);
+}
+.p3-assumption-dot{
+  width:5px;height:5px;
+  border-radius:50%;
+  background:var(--gd);
+  flex-shrink:0;
+}
+.p3-assumption-label{
+  font-size:9px;font-weight:700;
+  letter-spacing:.8px;text-transform:uppercase;
+  color:var(--tx3);
+  margin-bottom:var(--sp1);
+}
+
+/* ── Typed Follow-up Chips ── */
+.fup-typed-group{
+  display:flex;
+  flex-wrap:wrap;
+  gap:var(--sp1);
+  margin-top:var(--sp2);
+}
+.fup-t{
+  display:flex;align-items:center;gap:4px;
+  padding:5px var(--sp3);
+  border:1px solid var(--br);
+  border-radius:20px;
+  font-size:11.5px;
+  cursor:pointer;
+  background:var(--sf);
+  color:var(--tx2);
+  font-family:var(--ff);
+  transition:all .15s;
+  white-space:nowrap;
+}
+.fup-t:hover{background:var(--sf2);color:var(--tx);border-color:var(--br2)}
+.fup-t.clarify{border-color:rgba(88,152,204,.4);color:var(--bl)}
+.fup-t.clarify:hover{background:rgba(88,152,204,.08)}
+.fup-t.refine{border-color:rgba(196,144,46,.4);color:var(--gd)}
+.fup-t.refine:hover{background:var(--gd-l)}
+.fup-t.expand{border-color:rgba(58,184,152,.4);color:var(--teal)}
+.fup-t.expand:hover{background:rgba(58,184,152,.08)}
+.fup-t.convert{border-color:rgba(168,112,204,.4);color:#a870cc}
+.fup-t.convert:hover{background:rgba(168,112,204,.08)}
+.fup-t.progress{border-color:rgba(34,197,94,.4);color:var(--gn)}
+.fup-t.progress:hover{background:rgba(34,197,94,.08)}
+.fup-tag{
+  font-size:9px;font-weight:700;
+  letter-spacing:.5px;text-transform:uppercase;
+  padding:1px 4px;
+  border-radius:3px;
+  flex-shrink:0;
+}
+.fup-t.clarify .fup-tag{background:rgba(88,152,204,.15)}
+.fup-t.refine .fup-tag{background:var(--gd-l)}
+.fup-t.expand .fup-tag{background:rgba(58,184,152,.12)}
+.fup-t.convert .fup-tag{background:rgba(168,112,204,.12)}
+.fup-t.progress .fup-tag{background:rgba(34,197,94,.1)}
+
+/* ── Context Panel Phase 3 — Tabs ── */
+.cp-tabs{
+  display:flex;
+  gap:0;
+  border-bottom:1px solid var(--br);
+  background:var(--sf);
+  flex-shrink:0;
+  padding:0 var(--sp3);
+  overflow-x:auto;
+}
+.cp-tab{
+  padding:8px var(--sp3);
+  font-size:11px;font-weight:600;
+  color:var(--tx3);
+  cursor:pointer;
+  border-bottom:2px solid transparent;
+  white-space:nowrap;
+  transition:all .18s;
+  user-select:none;
+  flex-shrink:0;
+}
+.cp-tab:hover{color:var(--tx)}
+.cp-tab.act{color:var(--gd);border-bottom-color:var(--gd)}
+.cp-category-section{
+  margin-bottom:var(--sp3);
+}
+.cp-category-lbl{
+  font-size:9px;font-weight:700;letter-spacing:1.1px;
+  text-transform:uppercase;color:var(--tx3);
+  padding:var(--sp2) 0 var(--sp1);
+}
+.cp-detail-item{
+  padding:var(--sp2) 0;
+  border-bottom:1px solid var(--br);
+  font-size:12.5px;line-height:1.5;color:var(--tx2);
+}
+.cp-detail-item:last-child{border-bottom:none}
+.cp-detail-title{font-weight:600;color:var(--tx);font-size:12.5px;margin-bottom:2px}
+
+/* ── Premium Think Block ── */
+.think-premium{
+  background:var(--sf2);
+  border:1px solid rgba(224,170,48,.3);
+  border-radius:var(--r4);
+  overflow:hidden;
+  margin-bottom:var(--sp3);
+}
+.think-premium-hdr{
+  display:flex;align-items:center;gap:var(--sp2);
+  padding:var(--sp2) var(--sp3);
+  background:rgba(224,170,48,.08);
+  border-bottom:1px solid rgba(224,170,48,.2);
+  cursor:pointer;
+  user-select:none;
+  font-size:12px;font-weight:600;
+  color:var(--am);
+  transition:background var(--ease);
+}
+.think-premium-hdr:hover{background:rgba(224,170,48,.13)}
+.think-premium-tag{
+  font-size:9px;letter-spacing:.8px;text-transform:uppercase;
+  font-weight:700;padding:1px 5px;
+  background:rgba(224,170,48,.18);
+  border-radius:3px;margin-left:auto;
+}
+.think-premium-chev{
+  margin-left:var(--sp1);
+  transition:transform .2s;
+  color:var(--am);
+}
+.think-premium-hdr.open .think-premium-chev{transform:rotate(90deg)}
+.think-premium-body{display:none;padding:var(--sp3) var(--sp4)}
+.think-premium-body.show{display:block}
+.think-phase{
+  margin-bottom:var(--sp3);
+  padding-bottom:var(--sp3);
+  border-bottom:1px solid var(--br);
+}
+.think-phase:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.think-phase-label{
+  font-size:9px;font-weight:700;letter-spacing:.9px;
+  text-transform:uppercase;color:var(--tx3);
+  margin-bottom:var(--sp2);
+  display:flex;align-items:center;gap:var(--sp1);
+}
+.think-phase-dot{
+  width:6px;height:6px;border-radius:50%;background:var(--am);flex-shrink:0;
+}
+.think-phase-text{
+  font-size:12.5px;line-height:1.6;color:var(--tx2);
+  white-space:pre-wrap;
+}
+
+/* ── Keyword highlight in answers ── */
+.p3-keyval{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding:1px 6px;
+  background:var(--gd-l);
+  border:1px solid var(--gd-b);
+  border-radius:4px;
+  font-weight:600;
+  color:var(--gd);
+  font-size:12px;
+}
+
+/* ── Next Best Action footer ── */
+.p3-nba{
+  display:flex;align-items:center;gap:var(--sp2);
+  margin-top:var(--sp3);
+  padding:var(--sp2) var(--sp3);
+  background:var(--sf2);
+  border:1px solid var(--br);
+  border-radius:var(--r3);
+  font-size:12px;
+  color:var(--tx2);
+}
+.p3-nba-icon{font-size:13px;flex-shrink:0}
+.p3-nba-label{font-size:9px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--tx3);margin-right:var(--sp1)}
+.p3-nba-btn{
+  margin-left:auto;
+  padding:4px var(--sp3);
+  background:var(--tx);
+  border:none;border-radius:var(--r2);
+  color:var(--bg);
+  font-size:11.5px;font-weight:600;
+  cursor:pointer;font-family:var(--ff);
+  transition:opacity var(--ease);
+  white-space:nowrap;
+}
+.p3-nba-btn:hover{opacity:.82}
+
+/* ── Mode output shape badge ── */
+.resp-mode-shape{
+  display:inline-flex;align-items:center;gap:4px;
+  padding:2px 7px;
+  border-radius:4px;
+  font-size:9.5px;font-weight:700;letter-spacing:.5px;
+  text-transform:uppercase;
+  margin-bottom:var(--sp2);
+}
+.resp-mode-shape.ask{background:rgba(88,152,204,.1);color:var(--bl)}
+.resp-mode-shape.think{background:rgba(224,170,48,.1);color:var(--am)}
+.resp-mode-shape.research{background:rgba(58,184,152,.1);color:var(--teal)}
+.resp-mode-shape.build{background:rgba(196,144,46,.1);color:var(--gd)}
+.resp-mode-shape.act{background:rgba(196,76,60,.1);color:var(--coral)}
+
+/* ── Result/status panel ── */
+.p3-result-panel{
+  background:var(--sf2);
+  border:1px solid var(--br);
+  border-radius:var(--r4);
+  overflow:hidden;
+  margin:var(--sp2) 0;
+}
+.p3-result-hdr{
+  padding:var(--sp2) var(--sp3);
+  background:var(--sf3);
+  border-bottom:1px solid var(--br);
+  font-size:11px;font-weight:700;
+  letter-spacing:.5px;text-transform:uppercase;
+  color:var(--tx3);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.p3-result-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:7px var(--sp3);
+  border-bottom:1px solid var(--br);
+  font-size:13px;color:var(--tx);
+}
+.p3-result-row:last-child{border-bottom:none}
+.p3-result-val{font-weight:600;color:var(--gd)}
+
+/* ── Upgrade existing streaming think block ── */
+.think-block{
+  background:var(--sf2);
+  border:1px solid rgba(224,170,48,.25);
+  border-radius:var(--r3);
+  overflow:hidden;
+  margin-bottom:var(--sp3);
+}
+.think-hdr{
+  display:flex;align-items:center;gap:var(--sp2);
+  padding:6px var(--sp3);
+  font-size:11.5px;font-weight:600;color:var(--am);
+  cursor:pointer;
+  background:rgba(224,170,48,.07);
+  transition:background var(--ease);
+}
+.think-hdr:hover{background:rgba(224,170,48,.12)}
+.think-body{
+  display:none;
+  padding:var(--sp3) var(--sp4);
+  font-size:12px;
+  line-height:1.7;
+  color:var(--tx2);
+  white-space:pre-wrap;
+  border-top:1px solid rgba(224,170,48,.18);
+  max-height:280px;
+  overflow-y:auto;
+  font-family:var(--fm);
+}
+.think-body.show{display:block}
+.chev{transition:transform .2s;color:var(--tx3)}
+.think-hdr.open .chev{transform:rotate(90deg)}
+
+/* ── Severity upgrade ── */
+.sev-badge{
+  display:inline-flex;align-items:center;gap:var(--sp1);
+  padding:3px var(--sp2);
+  border-radius:var(--r1);
+  font-size:10.5px;font-weight:700;
+  letter-spacing:.4px;text-transform:uppercase;
+}
+.sev-badge.low{background:rgba(34,197,94,.12);color:var(--gn);border:1px solid rgba(34,197,94,.3)}
+.sev-badge.medium{background:rgba(224,170,48,.12);color:var(--am);border:1px solid rgba(224,170,48,.3)}
+/* ── Intelligence mode selector ── */
+.intel-btn{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:4px 10px 4px 8px;
+  border:1px solid var(--br);
+  border-radius:20px;
+  font-size:11px;font-weight:600;
+  font-family:var(--ff);
+  color:var(--tx2);
+  background:var(--sf2);
+  cursor:pointer;
+  transition:all var(--ease);
+  white-space:nowrap;
+  flex-shrink:0;
+  letter-spacing:.1px;
+}
+.intel-btn:hover{border-color:var(--br2);background:var(--sf3);color:var(--tx)}
+.intel-btn.auto{border-color:rgba(196,144,46,.35);color:var(--gd);background:var(--gd-l)}
+.intel-btn.fast{border-color:rgba(88,152,204,.35);color:var(--bl);background:rgba(88,152,204,.07)}
+.intel-btn.thinking{border-color:rgba(168,112,204,.38);color:#a870cc;background:rgba(168,112,204,.08)}
+.intel-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.intel-btn.auto .intel-dot{background:var(--gd)}
+.intel-btn.fast .intel-dot{background:var(--bl)}
+.intel-btn.thinking .intel-dot{background:#a870cc;animation:pls 2s ease-in-out infinite}
+.intel-menu{
+  position:fixed;background:var(--sf);border:1px solid var(--br);
+  border-radius:var(--r4);box-shadow:var(--sh-pop);z-index:800;display:none;min-width:232px;overflow:hidden;
+}
+.intel-menu.open{display:block}
+.intel-menu-head{padding:var(--sp2) var(--sp3);font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--tx3);border-bottom:1px solid var(--br)}
+.intel-opt{display:flex;align-items:flex-start;gap:var(--sp2);padding:var(--sp2) var(--sp3);cursor:pointer;transition:background var(--ease)}
+.intel-opt:hover{background:var(--sf2)}
+.intel-opt.act{background:var(--gd-l)}
+.intel-opt-icon{width:28px;height:28px;border-radius:var(--r2);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;border:1px solid var(--br);background:var(--sf2)}
+.intel-opt.auto .intel-opt-icon{background:var(--gd-l);border-color:var(--gd-b)}
+.intel-opt.fast .intel-opt-icon{background:rgba(88,152,204,.1);border-color:rgba(88,152,204,.25)}
+.intel-opt.thinking .intel-opt-icon{background:rgba(168,112,204,.1);border-color:rgba(168,112,204,.25)}
+.intel-opt-body{flex:1}
+.intel-opt-name{font-size:12.5px;font-weight:700;color:var(--tx);line-height:1.3}
+.intel-opt-desc{font-size:11px;color:var(--tx3);margin-top:1px;line-height:1.4}
+.intel-opt-check{color:var(--gd);flex-shrink:0;opacity:0;margin-top:6px}
+/* ── Settings Modal ── */
+.settings-overlay{position:fixed;inset:0;background:var(--lib-bg);z-index:600;display:none;align-items:flex-end;justify-content:center;padding-bottom:0}
+.settings-overlay.show{display:flex}
+@media(min-width:701px){.settings-overlay{align-items:center}}
+.settings-panel{background:var(--sf);border-radius:var(--r7) var(--r7) 0 0;width:100%;max-width:480px;overflow:hidden;box-shadow:var(--sh-xl);animation:fadeUp .28s var(--ease-out) both}
+@media(min-width:701px){.settings-panel{border-radius:var(--r7);margin:0 auto}}
+.settings-hdr{padding:var(--sp4) var(--sp5);border-bottom:1px solid var(--br);display:flex;align-items:center;justify-content:space-between}
+.settings-title{font-size:15px;font-weight:700;color:var(--tx)}
+.settings-body{padding:var(--sp4) var(--sp5);display:flex;flex-direction:column;gap:var(--sp4)}
+.settings-section-lbl{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--tx3);margin-bottom:var(--sp2)}
+.settings-row{display:flex;align-items:center;justify-content:space-between;padding:var(--sp3) 0;border-bottom:1px solid var(--br)}
+.settings-row:last-child{border-bottom:none}
+.settings-row-lbl{font-size:14px;color:var(--tx);font-weight:500}
+.settings-row-sub{font-size:12px;color:var(--tx3);margin-top:2px}
+.settings-toggle{width:40px;height:22px;background:var(--br2);border-radius:11px;cursor:pointer;position:relative;transition:background .2s;border:none;flex-shrink:0}
+.settings-toggle.on{background:var(--gd)}
+.settings-toggle::after{content:'';position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:white;transition:transform .2s}
+.settings-toggle.on::after{transform:translateX(18px)}
+.settings-version{font-size:11px;color:var(--tx3);text-align:center;padding:var(--sp3) 0 var(--sp1);}
 </style>
 </head>
 <body>
@@ -685,59 +1297,54 @@ body{width:100%;background:var(--bg);color:var(--tx);font-family:var(--ff);font-
       <div class="logo-mark" onclick="goHome();closeSb()"><span id="sb-logo"></span>
         <div class="logo-txt"><span class="logo-name">LIGNUM</span><span class="logo-sub">National AI</span></div>
       </div>
-      <button class="ic-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle theme"></button>
       <button class="sb-close" onclick="closeSb()" aria-label="Close sidebar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     </div>
 
     <button class="sb-new" onclick="goHome();closeSb()">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>New Chat
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>New Chat
     </button>
 
     <div class="sb-scr">
       <div class="sb-lbl">Navigate</div>
       <div class="sb-row act" id="nav-home" onclick="goHome();closeSb()">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home
       </div>
       <div class="sb-row" onclick="soon()">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>History
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>History
       </div>
       <div class="sb-row" onclick="soon()">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Projects
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Projects
       </div>
 
-      <div class="sb-lbl" style="margin-top:4px">Specialists</div>
-      <!-- Single folder entry — expands to show pinned + browse -->
-      <div class="sb-spec-folder" id="sb-spec-folder" onclick="toggleSpecFolder()">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-        <span style="flex:1;font-size:13.5px">All Specialists</span>
-        <svg class="sb-spec-folder-chev" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg>
-      </div>
-      <div class="sb-spec-inner" id="sb-spec-inner">
-        <!-- Pinned specialists injected by buildSb() -->
-        <div id="sb-pinned"></div>
-        <div class="sb-browse-btn" onclick="openLib();closeSb()">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Browse all specialists
-        </div>
+      <div class="sb-lbl" style="margin-top:var(--sp2)">Specialists</div>
+      <!-- Specialists injected flat by buildSb() -->
+      <div id="sb-specialists"></div>
+      <div class="sb-browse-btn" onclick="openLib();closeSb()">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Browse all specialists
       </div>
 
-      <div class="sb-lbl" style="margin-top:4px">Workspace</div>
+      <div class="sb-lbl" style="margin-top:var(--sp2)">Workspace</div>
       <div class="sb-row" onclick="soon()">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>My Business
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>My Business
       </div>
       <div class="sb-row" onclick="soon()">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Analytics
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Analytics
       </div>
     </div>
 
     <div class="sb-ft">
-      <div class="sb-av"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gd)" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-      <div class="sb-ft-info"><div class="sb-ft-name">LIGNUM</div><div class="sb-ft-meta">Jamaica National AI</div></div>
-      <button class="ic-btn" onclick="toggleTheme()" id="themeBtn3" aria-label="Toggle theme"></button>
+      <div class="sb-av" onclick="openSettings()" title="Settings"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gd)" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+      <div class="sb-ft-info" onclick="openSettings()">
+        <div class="sb-ft-name">LIGNUM</div>
+        <div class="sb-ft-meta">Jamaica National AI · Settings</div>
+      </div>
+      <button class="ic-btn" onclick="toggleTheme()" id="themeBtn" aria-label="Toggle theme"></button>
     </div>
   </aside>
 
   <!-- Menus -->
   <div id="mode-menu" class="mode-menu" role="menu"></div>
+  <div id="intel-menu" class="intel-menu" role="menu"></div>
   <div id="spec-picker" class="spec-picker" role="listbox"></div>
 
   <!-- Main -->
@@ -745,22 +1352,27 @@ body{width:100%;background:var(--bg);color:var(--tx);font-family:var(--ff);font-
     <div class="top-bar" id="top-bar">
       <button class="bar-btn" onclick="openSb()" aria-label="Open sidebar"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
       <div class="tbar-logo"><span id="tb-logo"></span>LIGNUM</div>
-      <button class="bar-btn" id="themeBtn2" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+      <div style="width:38px"></div>
     </div>
     <div class="view" id="view"></div>
   </div>
 
-  <!-- Context Panel — tabless, on-demand -->
+  <!-- Context Panel — Phase 3 with tabs -->
   <div class="ctx-panel" id="ctx-panel" role="complementary" aria-label="Context panel">
     <div class="cp-head">
-      <div class="cp-title" id="cp-title">Sources</div>
-      <span class="cp-type-badge" id="cp-badge">Sources</span>
+      <div class="cp-title" id="cp-title">Context</div>
       <button class="ic-btn" id="cp-close-btn" onclick="closeCtx()" aria-label="Close context panel"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="cp-tabs" id="cp-tabs">
+      <div class="cp-tab act" data-tab="sources" onclick="switchCtxTab('sources')">Sources</div>
+      <div class="cp-tab" data-tab="details" onclick="switchCtxTab('details')">Details</div>
+      <div class="cp-tab" data-tab="assumptions" onclick="switchCtxTab('assumptions')">Assumptions</div>
+      <div class="cp-tab" data-tab="related" onclick="switchCtxTab('related')">Related</div>
     </div>
     <div class="cp-body" id="cp-body"></div>
   </div>
 
-  <!-- Specialist Library Overlay — single entry point -->
+  <!-- Specialist Library Overlay -->
   <div class="lib-overlay" id="lib-overlay" onclick="libOverlayClick(event)" role="dialog" aria-modal="true" aria-label="Specialist Library">
     <div class="lib-drawer" id="lib-drawer">
       <div class="lib-hdr">
@@ -769,6 +1381,37 @@ body{width:100%;background:var(--bg);color:var(--tx);font-family:var(--ff);font-
         <button class="ic-btn" onclick="closeLib()" aria-label="Close library"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
       </div>
       <div class="lib-body" id="lib-body"></div>
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div class="settings-overlay" id="settings-overlay" onclick="settingsOverlayClick(event)">
+    <div class="settings-panel" id="settings-panel">
+      <div class="settings-hdr">
+        <div class="settings-title">Settings</div>
+        <button class="ic-btn" onclick="closeSettings()" aria-label="Close settings"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>
+      <div class="settings-body">
+        <div>
+          <div class="settings-section-lbl">Appearance</div>
+          <div class="settings-row">
+            <div><div class="settings-row-lbl">Dark Mode</div><div class="settings-row-sub">Switch between light and dark theme</div></div>
+            <button class="settings-toggle" id="dark-toggle" onclick="toggleThemeFromSettings()" aria-label="Toggle dark mode"></button>
+          </div>
+        </div>
+        <div>
+          <div class="settings-section-lbl">Intelligence</div>
+          <div class="settings-row">
+            <div><div class="settings-row-lbl">Auto Intelligence</div><div class="settings-row-sub">Automatically picks the best engine per question</div></div>
+            <button class="settings-toggle on" id="auto-intel-toggle" onclick="toggleAutoIntel()" aria-label="Toggle auto intelligence"></button>
+          </div>
+        </div>
+        <div>
+          <div class="settings-section-lbl">About</div>
+          <div class="settings-row"><div><div class="settings-row-lbl">LIGNUM</div><div class="settings-row-sub">Jamaica's National AI Platform</div></div></div>
+          <div class="settings-row"><div><div class="settings-row-lbl">Version</div><div class="settings-row-sub">v10.0 — Phase 3</div></div></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -819,16 +1462,66 @@ const FOLDERS=[
 const PINNED_IDS=['oneil','kayla','kemar','nadine']; // 4 pinned on home
 
 const AG=[
-  {id:'kayla',n:'Miss Kayla',role:'Education',c:'#6b8fe0',desc:'CXC, PEP, HEART tutor',sys:`You are Miss Kayla – LIGNUM Education Specialist. Specialize in CXC, PEP, HEART, NSTA. Use warm Jamaican Patwa naturally. Know every CXC syllabus, past papers 2015–2025, CAPE units. Break down step-by-step. Cite past papers. Encourage students always.`,rag:['CXC Syllabus 2025 – Caribbean Examinations Council','HEART/NSTA Course Catalogue 2026','PEP Past Papers 2024 – Ministry of Education JA'],chips:['CXC Math help','CAPE Biology','PEP prep','HEART courses']},
-  {id:'delroy',n:'Uncle Delroy',role:'Agriculture',c:'#3da870',desc:'Farming, JAMIS prices, RADA',sys:`You are Uncle Delroy – LIGNUM Agriculture Specialist. Expert in Jamaican farming: yam, banana, scotch bonnet, ackee, Blue Mountain coffee, breadfruit. Know JAMIS prices, RADA advice, pest management. Speak Jamaican Patwa. Quote JAMIS prices when relevant.`,rag:['JAMIS Market Price Report – March 2026','RADA Crop Calendar 2026','Ministry of Agriculture & Fisheries'],chips:['Crop prices today','Yam disease fix','RADA grants','Irrigation help']},
-  {id:'nadine',n:'Auntie Nadine',role:'Tourism',c:'#d4904a',desc:'Itineraries, hotels, food',sys:`You are Auntie Nadine – LIGNUM Tourism Specialist. Know every parish, resort, hidden gem. Build detailed itineraries, recommend food, suggest transport. Include real JMD and USD prices.`,rag:["JTB Tourism Guide 2026 – Jamaica Tourist Board","Parish Events Calendar – Culture JA","Hotel & Guest House Registry – MoT Jamaica"],chips:['Negril 3-day plan','Blue Mountains tour','Best jerk spots','Cheap transport']},
-  {id:'shamar',n:'Shamar',role:'Sales',c:'#d46868',desc:'Leads, objections, closing',sys:`You are Shamar – LIGNUM Sales Specialist. Close deals for any Jamaican business. Qualify leads, handle objections, guide to payment.`,rag:['Business Registry – JBRO 2026','Consumer Affairs Commission Jamaica'],chips:['Close a sale','Handle objection','Quote a price','Book appointment']},
-  {id:'sashoy',n:'Sashoy',role:'Support',c:'#a870cc',desc:'Customer service, complaints',sys:`You are Sashoy – LIGNUM Customer Service Ambassador. Handle all queries 24/7 with grace and Jamaican warmth. Resolve complaints, answer FAQs, deescalate professionally.`,rag:['Consumer Affairs Act Jamaica – CAC','Business Complaint Registry – CAC'],chips:['File complaint','Track my order','Refund request','Product question']},
-  {id:'bounty',n:'Bounty',role:'Marketing',c:'#c8a030',desc:'WhatsApp, Instagram, ads',sys:`You are Bounty – LIGNUM Marketing Specialist. Create FIRE marketing content: WhatsApp blasts, Instagram captions, Facebook ads, dancehall-style promo. Know the Jamaican market.`,rag:['CAIJ Advertising Standards 2026','Social Media Trends JA – Q1 2026'],chips:['WhatsApp blast','Instagram caption','Promo text','Event flyer']},
-  {id:'kemar',n:'Mr. Kemar',role:'Finance',c:'#3ab898',desc:'Invoices, GCT, Lynk, TAJ',sys:`You are Mr. Kemar – LIGNUM Finance Specialist. Handle invoicing, Lynk payment links, GCT (15%), bookkeeping for SMEs. Know TAJ filing dates, BOJ regulations.`,rag:['TAJ Filing Calendar 2026 – Tax Administration Jamaica','BOJ Financial Regulations','GCT Act Jamaica – Ministry of Finance'],chips:['Create invoice','Lynk payment link','GCT calculation','TAJ deadline']},
-  {id:'rastajay',n:'Rasta Jay',role:'Culture',c:'#e0882a',desc:'Music, dancehall, events',sys:`You are Rasta Jay – LIGNUM Culture Specialist. Authority on Jamaican music, sound clashes, dancehall, reggae. Know every artist from Studio One to 2026.`,rag:['Reggae Sumfest 2026 – Summerfest Productions','Sound Clash Calendar Jamaica – JCDC'],chips:['Next big event','Sound clash tickets','Hot riddim now','Sumfest lineup']},
-  {id:'oneil',n:'Sister Oneil',role:'Government',c:'#5898cc',desc:'Passport, TRN, NHT, PICA',sys:`You are Sister Oneil – LIGNUM Government Specialist. Guide through NIS, TAJ, passport renewal (PICA), birth certificate, TRN, driver's licence, NHT benefits, PATH, voter registration. Know every form, fee, office by parish.`,rag:['GOJ e-Services Portal 2026 – Government of Jamaica','PICA Passport Services 2026','NHT Benefit Guidelines','TAJ Forms Catalogue 2026'],chips:['Renew passport','Get TRN','NIS registration','NHT benefit']},
-  {id:'biggs',n:'Biggs',role:'Small Biz',c:'#b8832a',desc:'JBRO, Lynk, JPS, NWC',sys:`You are Biggs – LIGNUM Small Business Specialist. Help with JBRO registration, remittance, mobile money (Lynk, NCB, CBDC), JPS bills, NWC, internet plans.`,rag:['JBRO Business Registry 2026','JPS Tariff Schedule 2026','BOJ CBDC & Digital Payments Guide 2026'],chips:['Register my business','Send remittance','JPS bill help','Internet plan']}
+  {id:'kayla',n:'Miss Kayla',role:'Education',c:'#6b8fe0',desc:'CXC, PEP, HEART tutor',
+   sys:`You are Miss Kayla — LIGNUM Education Specialist. Your domain is STRICTLY education: CXC, CAPE, PEP, HEART/NSTA, school subjects, study help, past papers, student advice.
+DOMAIN RULE: You ONLY answer questions about learning, school, exams, academic subjects, and student life. If someone asks about Jamaican history, culture, government services, farming, business, travel, or anything outside education, politely redirect: "That's a bit outside my classroom — try asking Sister Oneil for government questions, Rasta Jay for culture and history, or visit the Home screen to find the right specialist." Never attempt to answer out-of-domain questions.
+Your strengths: CXC syllabi 2015–2026, CAPE units, PEP past papers, HEART courses, every Jamaica secondary school subject. Break down steps clearly. Use warm Jamaican Patwa. Encourage students always.`,
+   rag:['CXC Syllabus 2025 – Caribbean Examinations Council','HEART/NSTA Course Catalogue 2026','PEP Past Papers 2024 – Ministry of Education JA'],chips:['CXC Math help','CAPE Biology','PEP prep','HEART courses']},
+
+  {id:'delroy',n:'Uncle Delroy',role:'Agriculture',c:'#3da870',desc:'Farming, JAMIS prices, RADA',
+   sys:`You are Uncle Delroy — LIGNUM Agriculture Specialist. Your domain is STRICTLY Jamaican agriculture, farming, crops, livestock, and rural livelihoods.
+DOMAIN RULE: You ONLY answer about farming, crops, soil, pests, weather patterns for farming, JAMIS market prices, RADA services, agricultural grants, and rural Jamaica. If asked about history, government services, business registration, tourism, or anything else, redirect: "Dat nuh mi area — try Biggs for business, Sister Oneil for government, or go back to Home fi di right specialist." Never attempt to answer out-of-domain questions.
+Your strengths: yam, banana, scotch bonnet, ackee, Blue Mountain coffee, breadfruit, cassava. JAMIS daily prices, RADA advice, pest management, crop disease diagnosis, irrigation, planting calendars.`,
+   rag:['JAMIS Market Price Report – March 2026','RADA Crop Calendar 2026','Ministry of Agriculture & Fisheries'],chips:['Crop prices today','Yam disease fix','RADA grants','Irrigation help']},
+
+  {id:'nadine',n:'Auntie Nadine',role:'Tourism',c:'#d4904a',desc:'Itineraries, hotels, food',
+   sys:`You are Auntie Nadine — LIGNUM Tourism Specialist. Your domain is STRICTLY Jamaica travel, tourism, hospitality, events, food, and visitor experiences.
+DOMAIN RULE: You ONLY answer about Jamaica travel itineraries, parishes, hotels, guest houses, restaurants, beaches, attractions, transport options, and events. If asked about government services, farming, business registration, history, or anything else, redirect: "Mi can only help with travel and tourism — for other questions, check out the Home screen to find the right specialist." Never attempt to answer out-of-domain questions.
+Your strengths: every parish, resort, hidden gem. Real JMD and USD prices. Practical transport tips. Local food recommendations. Seasonal events and festivals.`,
+   rag:["JTB Tourism Guide 2026 – Jamaica Tourist Board","Parish Events Calendar – Culture JA","Hotel & Guest House Registry – MoT Jamaica"],chips:['Negril 3-day plan','Blue Mountains tour','Best jerk spots','Cheap transport']},
+
+  {id:'shamar',n:'Shamar',role:'Sales',c:'#d46868',desc:'Leads, objections, closing',
+   sys:`You are Shamar — LIGNUM Sales Specialist. Your domain is STRICTLY sales, business development, lead generation, negotiations, and closing deals for Jamaican businesses.
+DOMAIN RULE: You ONLY help with sales scripts, objection handling, lead qualification, proposals, closing techniques, pricing strategies, and customer acquisition. If asked about accounting, government documents, history, farming, or anything outside sales, redirect: "Sales is mi lane — for other questions, head back to Home to find the right specialist." Never attempt to answer out-of-domain questions.
+Your strengths: Jamaican business culture, WhatsApp selling, objection responses, proposal writing, pricing scripts, follow-up sequences.`,
+   rag:['Business Registry – JBRO 2026','Consumer Affairs Commission Jamaica'],chips:['Close a sale','Handle objection','Quote a price','Book appointment']},
+
+  {id:'sashoy',n:'Sashoy',role:'Support',c:'#a870cc',desc:'Customer service, complaints',
+   sys:`You are Sashoy — LIGNUM Customer Service Specialist. Your domain is STRICTLY customer service, complaint handling, and consumer rights in Jamaica.
+DOMAIN RULE: You ONLY help with customer complaints, refund requests, service escalations, consumer rights under Jamaican law, and professional response drafting. If asked about government documents, farming, history, or anything outside customer service, redirect: "Customer care is my specialty — for other questions, visit Home to find the right specialist." Never attempt to answer out-of-domain questions.
+Your strengths: Consumer Affairs Commission Jamaica, complaint letter templates, de-escalation, refund processes, service recovery scripts.`,
+   rag:['Consumer Affairs Act Jamaica – CAC','Business Complaint Registry – CAC'],chips:['File complaint','Track my order','Refund request','Product question']},
+
+  {id:'bounty',n:'Bounty',role:'Marketing',c:'#c8a030',desc:'WhatsApp, Instagram, ads',
+   sys:`You are Bounty — LIGNUM Marketing Specialist. Your domain is STRICTLY marketing, advertising, and promotional content for Jamaican businesses.
+DOMAIN RULE: You ONLY help with WhatsApp blasts, Instagram captions, Facebook ads, flyers, slogans, content calendars, and brand voice for the Jamaican market. If asked about tax, government documents, history, or anything outside marketing, redirect: "Marketing is my world — for other areas, check Home for the right specialist." Never attempt to answer out-of-domain questions.
+Your strengths: Jamaican market tone, dancehall-style copy, WhatsApp marketing, social media content, local ad standards.`,
+   rag:['CAIJ Advertising Standards 2026','Social Media Trends JA – Q1 2026'],chips:['WhatsApp blast','Instagram caption','Promo text','Event flyer']},
+
+  {id:'kemar',n:'Mr. Kemar',role:'Finance',c:'#3ab898',desc:'Invoices, GCT, Lynk, TAJ',
+   sys:`You are Mr. Kemar — LIGNUM Finance Specialist. Your domain is STRICTLY Jamaican small business finance, accounting, invoicing, tax compliance, and payments.
+DOMAIN RULE: You ONLY help with invoices, GCT (15%) calculations, Lynk payment links, TAJ filing, bookkeeping, business banking, and financial planning for SMEs. If asked about history, crop prices, travel, or anything outside finance, redirect: "Finance is my specialty — for other questions, go back to Home to find the right specialist." Never attempt to answer out-of-domain questions.
+Your strengths: TAJ filing calendar 2026, GCT returns, NIS contributions, BOJ regulations, invoice generation, payroll basics.`,
+   rag:['TAJ Filing Calendar 2026 – Tax Administration Jamaica','BOJ Financial Regulations','GCT Act Jamaica – Ministry of Finance'],chips:['Create invoice','Lynk payment link','GCT calculation','TAJ deadline']},
+
+  {id:'rastajay',n:'Rasta Jay',role:'Culture',c:'#e0882a',desc:'Music, history, culture',
+   sys:`You are Rasta Jay — LIGNUM Culture & History Specialist. Your domain covers Jamaican culture, history, heritage, music, arts, notable figures, and national identity.
+DOMAIN RULE: You are the go-to specialist for ALL questions about Jamaican history (including historical figures like Nanny of the Maroons, Marcus Garvey, Sam Sharpe, Paul Bogle), music (reggae, dancehall, ska, rocksteady), cultural events, national heroes, emancipation, independence, Rastafari, folk traditions, and Jamaican identity. You also help with general Jamaican knowledge questions.
+If asked about government document processes, farming chemicals, business registration, or financial accounting specifically, redirect to the right specialist. But you handle culture, history, people, and heritage fully.
+Your strengths: Full Jamaican history from Taino times through colonialism, slavery, emancipation, independence to today. Every national hero, every music era, every cultural tradition. Speak with warmth and Jamaican pride.`,
+   rag:['Reggae Sumfest 2026 – Summerfest Productions','Sound Clash Calendar Jamaica – JCDC','Jamaica National Heritage Trust','National Library of Jamaica'],chips:['Nanny of the Maroons','Bob Marley history','Jamaica independence','Dancehall origins']},
+
+  {id:'oneil',n:'Sister Oneil',role:'Government',c:'#5898cc',desc:'Passport, TRN, NHT, PICA',
+   sys:`You are Sister Oneil — LIGNUM Government Services Specialist. Your domain is STRICTLY Jamaican government services, civic processes, and public administration.
+DOMAIN RULE: You ONLY help with passport renewal, TRN, NIS registration, NHT benefits, PATH, voter registration, driver's licence, birth certificates, police records, trade licences, and navigating GOJ services. If asked about farming, tourism, marketing, or history, redirect: "Government services are my specialty — for other questions, head to Home to find the right specialist." Never attempt to answer out-of-domain questions.
+Your strengths: PICA 2026 processes, TAJ forms, NHT eligibility, every government form and fee in Jamaica, office locations by parish, processing times.`,
+   rag:['GOJ e-Services Portal 2026 – Government of Jamaica','PICA Passport Services 2026','NHT Benefit Guidelines','TAJ Forms Catalogue 2026'],chips:['Renew passport','Get TRN','NIS registration','NHT benefit']},
+
+  {id:'biggs',n:'Biggs',role:'Small Biz',c:'#b8832a',desc:'JBRO, Lynk, JPS, NWC',
+   sys:`You are Biggs — LIGNUM Small Business Operations Specialist. Your domain is STRICTLY small business setup, utilities, mobile money, and operational services in Jamaica.
+DOMAIN RULE: You ONLY help with JBRO business registration, remittance services, Lynk/NCB/CBDC setup, JPS electricity bills, NWC water accounts, internet plans, and day-to-day operational business needs. If asked about culture, history, farming, sales strategy, or financial accounting, redirect: "Business operations are my lane — for other questions, go to Home to find the right specialist." Never attempt to answer out-of-domain questions.
+Your strengths: JBRO 2026 registration steps, remittance comparison, mobile money setup, JPS tariff guide, NWC account management, business internet options.`,
+   rag:['JBRO Business Registry 2026','JPS Tariff Schedule 2026','BOJ CBDC & Digital Payments Guide 2026'],chips:['Register my business','Send remittance','JPS bill help','Internet plan']}
 ];
 const AG_MAP=Object.fromEntries(AG.map(a=>[a.id,a]));
 
@@ -944,22 +1637,22 @@ const TOOL_TRIGGERS={
 };
 
 const MODES={
-  ask:{label:'Ask',icon:'💬',desc:'Fast · Clear',model:'deepseek-chat',stream:true,temp:.72,tokens:600,
-    prefix:'Respond in a warm, clear, conversational way. Keep answers concise and friendly. Use Jamaican Patwa naturally.'},
-  think:{label:'Think',icon:'🧠',desc:'Deep · Careful',model:'deepseek-reasoner',stream:true,temp:null,tokens:1400,
-    prefix:'Think carefully and thoroughly before answering. Provide deep, step-by-step reasoning. Be comprehensive and accurate.'},
-  research:{label:'Research',icon:'🔍',desc:'Structured · Cited',model:'deepseek-chat',stream:true,temp:.7,tokens:950,
-    prefix:'Research mode: structured, information-rich responses. Use clear sections. Reference specific documents, policies, dates, fees, and official sources.'},
-  build:{label:'Build',icon:'🏗️',desc:'Cards · Create',model:'deepseek-chat',stream:false,temp:.65,tokens:1600,
-    prefix:'Build mode: generate complete, structured, ready-to-use content. When asked for itineraries, processes, diagnoses, or quizzes — return structured JSON as instructed.'},
-  act:{label:'Act',icon:'⚡',desc:'Steps · Execute',model:'deepseek-chat',stream:true,temp:.7,tokens:750,
-    prefix:'Act mode: numbered, immediately actionable step-by-step plans. Include exact fees, phone numbers, addresses, and deadlines.'}
+  ask:{label:'Ask',icon:'💬',desc:'Fast · Clear',model:'deepseek-chat',stream:true,temp:.72,tokens:700,
+    prefix:'Respond in a warm, clear, conversational way. Keep answers concise and friendly. Use Jamaican Patwa naturally. Structure: one lead sentence, then 2–3 short tight paragraphs, then a "Next step" suggestion. No long walls of text.'},
+  think:{label:'Think',icon:'🧠',desc:'Deep · Careful',model:'deepseek-reasoner',stream:true,temp:null,tokens:1600,
+    prefix:'Think carefully and thoroughly before answering. Show your reasoning step by step. Provide a structured answer with: a one-line conclusion first, then supporting reasoning in clear sections. Be comprehensive, cite specific facts, and flag any uncertainty.'},
+  research:{label:'Research',icon:'🔍',desc:'Structured · Cited',model:'deepseek-chat',stream:true,temp:.7,tokens:1100,
+    prefix:'Research mode: produce a structured, information-rich response. Format: short summary → clearly labelled sections → sources/references at the end. Include specific numbers, dates, fees, official sources. Use ## headers for sections. Always end with: "Source: [name]" for any cited fact.'},
+  build:{label:'Build',icon:'🏗️',desc:'Cards · Create',model:'deepseek-chat',stream:false,temp:.65,tokens:1800,
+    prefix:'Build mode: generate complete, structured, ready-to-use output. For itineraries, processes, diagnoses, quizzes, invoices — return structured JSON exactly as instructed. Output must be a complete, ready-to-use deliverable. No filler. No partial output.'},
+  act:{label:'Act',icon:'⚡',desc:'Steps · Execute',model:'deepseek-chat',stream:true,temp:.7,tokens:850,
+    prefix:'Act mode: numbered, immediately actionable steps only. Format: bold action verb → specific detail → (cost or contact if relevant). Max 7 steps. Include exact fees, phone numbers, addresses, and deadlines where known. End with: "✅ You can start this today by: [first action]"'}
 };
 
 // ── BASE SYSTEM ──
-const BASE_SYSTEM=`You are LIGNUM — Jamaica's national AI workspace.
-Rules: Be accurate, practical, and concise. Use Jamaican Patwa naturally when appropriate. Use en-GB spelling unless asked otherwise. Never claim actions you did not perform. If unsure of a specific fee/date, say so and recommend the official source.
-Output: When structured JSON output is requested, obey the schema exactly. Otherwise respond in clean markdown for chat UI.`;
+const BASE_SYSTEM=`You are LIGNUM — Jamaica's national AI workspace. Built for Jamaicans, by Jamaica's National AI Lab.
+Core rules: Be accurate, practical, and concise. Use Jamaican Patwa naturally when appropriate — not forced. Use en-GB spelling unless asked otherwise. Never claim actions you did not perform. If unsure of a specific fee, date, or policy, say so clearly and recommend the official source (gov.jm, pica.gov.jm, rada.gov.jm, etc.).
+Output quality: When structured JSON output is requested, obey the schema exactly and completely. Otherwise respond in clean markdown for chat UI. Every answer should feel like it was written for a smart Jamaican who wants real, usable information — not generic AI text.`;
 
 // ═══════════════════════════════════════
 // PHASE 2 — INTENT ROUTER
@@ -1012,55 +1705,233 @@ const CARD_SCHEMAS={
 WORKFLOW: Trip Planner. Return ONLY valid JSON — no markdown, no backticks.
 Include REAL Jamaican places, prices in JMD, practical local advice.
 Each day must have 3–5 items with specific times and cost estimates.
-{"answer_markdown":"One vivid sentence setting the scene","cards":[{"id":"card_trip_1","type":"trip","title":"[Destination] — [N] Days","data":{"destination":"","duration":"","budget":"","transport":"","days":[{"day":1,"heading":"Day 1 — [Theme e.g. Arrival & Beach]","items":[{"time":"9:00 AM","activity":"Specific activity at a real named place","costEstimate":"JM$XXXX"}]}],"tips":["Practical local tip 1","Practical local tip 2","Practical local tip 3"],"totalEstimate":""}}],"followups":["Make it cheaper","Show family-friendly version","Switch to a different parish","Add restaurant recommendations"],"sources":[{"title":"JTB Jamaica Tourism 2026","url":"https://www.visitjamaica.com"}]}`,
+REQUIRED: include "summary" (1-sentence practical takeaway), "sections" array (2–3 expandable sections e.g. budget breakdown, packing tips, transport notes), "assumptions" array (e.g. "Budget: mid-range", "Group size: 2"), "nextAction" (most important thing to do first).
+{"answer_markdown":"One vivid sentence setting the scene","summary":"Short practical takeaway for the traveller","cards":[{"id":"card_trip_1","type":"trip","title":"[Destination] — [N] Days","data":{"destination":"","duration":"","budget":"","transport":"","days":[{"day":1,"heading":"Day 1 — [Theme e.g. Arrival & Beach]","items":[{"time":"9:00 AM","activity":"Specific activity at a real named place","costEstimate":"JM$XXXX"}]}],"tips":["Practical local tip 1","Practical local tip 2","Practical local tip 3"],"totalEstimate":""}}],"sections":[{"id":"s1","title":"Budget Breakdown","icon":"💰","type":"fees","items":[{"label":"Accommodation (per night)","value":"JM$XXXX"},{"label":"Food & drinks (daily)","value":"JM$XXXX"},{"label":"Transport","value":"JM$XXXX"},{"label":"Activities","value":"JM$XXXX"}]},{"id":"s2","title":"Packing & Tips","icon":"🎒","type":"checklist","items":["Item 1","Item 2","Item 3"]},{"id":"s3","title":"Getting There","icon":"🚌","type":"text","content":"Transport options and how to get between locations."}],"assumptions":["Budget: mid-range","Group size: 2 adults","Travel period: 2026"],"nextAction":"Book accommodation first — popular spots fill up fast","followups":[{"type":"refine","text":"Make it cheaper"},{"type":"refine","text":"Family-friendly version"},{"type":"convert","text":"Turn into WhatsApp-ready summary"},{"type":"expand","text":"Add restaurant recommendations"}],"sources":[{"title":"JTB Jamaica Tourism 2026","url":"https://www.visitjamaica.com"}]}`,
 
   civic:`
 WORKFLOW: Government Process Guide. Return ONLY valid JSON — no markdown, no backticks.
 Use REAL 2026 Jamaica government information: actual fees in JMD, real PICA/TAJ/NHT contacts, accurate steps.
-List documents as plain strings. Steps must be specific and actionable — not generic advice.
-{"answer_markdown":"One sentence that explains what this process achieves","cards":[{"id":"card_civic_1","type":"civic","title":"[Exact Process Name]","data":{"agency":"[Real agency name]","topic":"","fees":[{"label":"[Specific fee name]","amount":"JM$XXXX"}],"requiredDocuments":["Specific document 1","Specific document 2"],"steps":["Step 1: specific action","Step 2: specific action"],"contact":[{"label":"Phone","value":"1-888-XXX-XXXX"},{"label":"Website","value":"www.example.gov.jm"}],"processingTime":"[Realistic estimate]","offices":["Kingston — address","Montego Bay — address"],"commonMistakes":["Common mistake 1","Common mistake 2"]}}],"followups":["What if my document is lost or expired?","Show me only the required documents","Show a simple checklist","What are the office hours?"],"sources":[{"title":"GOJ Official Portal","url":"https://www.gov.jm"}]}`,
+REQUIRED: include "summary" (1-sentence practical takeaway), "sections" array (expandable detail sections), "assumptions" array, "nextAction", "warnings" array.
+{"answer_markdown":"One sentence that explains what this process achieves","summary":"Short practical summary of what the person needs to know first","cards":[{"id":"card_civic_1","type":"civic","title":"[Exact Process Name]","data":{"agency":"[Real agency name]","topic":"","fees":[{"label":"[Specific fee name]","amount":"JM$XXXX"}],"requiredDocuments":["Specific document 1","Specific document 2"],"steps":["Step 1: specific action","Step 2: specific action"],"contact":[{"label":"Phone","value":"1-888-XXX-XXXX"},{"label":"Website","value":"www.example.gov.jm"}],"processingTime":"[Realistic estimate]","offices":["Kingston — address","Montego Bay — address"],"commonMistakes":["Common mistake 1","Common mistake 2"]}}],"sections":[{"id":"s1","title":"Timeline & What to Expect","icon":"⏱","type":"timeline","items":[{"title":"Submit application","desc":"At PICA or online","meta":"Day 1"},{"title":"Biometric appointment","desc":"At designated office","meta":"Week 1–2"},{"title":"Collection or delivery","desc":"Standard processing","meta":"3–6 weeks"}]},{"id":"s2","title":"Office Hours & Locations","icon":"📍","type":"text","content":"List office hours and key locations here."},{"id":"s3","title":"What If My Document Is Lost?","icon":"❓","type":"text","content":"Guidance for lost/stolen document replacements."}],"warnings":[{"type":"warn","title":"Important","body":"Processing times may vary — always verify at the official government portal."}],"assumptions":["Standard adult application","Document not expired or lost"],"nextAction":"Gather all required documents before visiting any office","followups":[{"type":"clarify","text":"What if my passport is lost or stolen?"},{"type":"refine","text":"Show only required documents"},{"type":"convert","text":"Make this a printable checklist"},{"type":"expand","text":"Show common mistakes"}],"sources":[{"title":"GOJ Official Portal","url":"https://www.gov.jm"}]}`,
 
   crop:`
 WORKFLOW: Crop Diagnosis. Return ONLY valid JSON — no markdown, no backticks.
 Be specific about the crop and problem. Give actionable treatment steps a Jamaican farmer can do TODAY.
 Severity must be one of: low, medium, high.
-{"answer_markdown":"One sentence diagnosis summary","cards":[{"id":"card_crop_1","type":"crop","title":"[Crop Name] — [Specific Problem]","data":{"crop":"","issue":"","severity":"medium","symptoms":["Visible symptom 1","Visible symptom 2"],"likelyCauses":["Specific cause 1","Specific cause 2"],"recommendedActions":["Immediate action 1 — be specific","Action 2","Action 3"],"prevention":["Prevention tip 1","Prevention tip 2"],"escalate":"When to call RADA or seek further help","radaContact":"1-888-429-5346"}}],"followups":["What if it keeps spreading?","Organic treatment option","Chemical treatment option","How do I prevent this next season?"],"sources":[{"title":"RADA Crop Advisory 2026","url":"https://www.rada.gov.jm"}]}`,
+REQUIRED: include "summary", "sections" (immediate vs prevention split, weekly action plan), "assumptions", "nextAction", "warnings".
+{"answer_markdown":"One sentence diagnosis summary","summary":"Most important thing the farmer needs to know right now","cards":[{"id":"card_crop_1","type":"crop","title":"[Crop Name] — [Specific Problem]","data":{"crop":"","issue":"","severity":"medium","symptoms":["Visible symptom 1","Visible symptom 2"],"likelyCauses":["Specific cause 1","Specific cause 2"],"recommendedActions":["Immediate action 1 — be specific","Action 2","Action 3"],"prevention":["Prevention tip 1","Prevention tip 2"],"escalate":"When to call RADA or seek further help","radaContact":"1-888-429-5346"}}],"sections":[{"id":"s1","title":"What To Do This Week","icon":"⚡","type":"checklist","items":["Immediate action 1","Immediate action 2","Monitor progress by day 3"]},{"id":"s2","title":"Treatment Options","icon":"🧪","type":"comparison","left":{"label":"Organic","items":["Organic option 1","Organic option 2"]},"right":{"label":"Chemical","items":["Chemical option 1","Chemical option 2"]}},{"id":"s3","title":"When To Escalate","icon":"📞","type":"text","content":"Call RADA if symptoms worsen within 3 days or spread to more than 30% of plants."}],"warnings":[{"type":"danger","title":"Act Quickly","body":"High severity — delay may result in total crop loss."}],"assumptions":["Small to medium farm scale","Standard Jamaica growing conditions"],"nextAction":"Apply first treatment within 24 hours","followups":[{"type":"clarify","text":"What if it keeps spreading?"},{"type":"refine","text":"Show organic treatment only"},{"type":"refine","text":"Show chemical treatment only"},{"type":"progress","text":"How to prevent next season"}],"sources":[{"title":"RADA Crop Advisory 2026","url":"https://www.rada.gov.jm"}]}`,
 
   quiz:`
 WORKFLOW: CXC Practice Quiz. Return ONLY valid JSON — no markdown, no backticks.
 Generate EXACTLY 5 high-quality questions. Each question must have exactly 4 options (A, B, C, D).
 answerIndex is 0-based (0=A, 1=B, 2=C, 3=D). Explanation must clearly explain WHY the answer is correct.
-Base questions on real CXC syllabi and past paper style.
-{"answer_markdown":"One sentence introducing the quiz topic","cards":[{"id":"card_quiz_1","type":"quiz","title":"[Subject] — [Topic] Practice","data":{"subject":"","topic":"","difficulty":"medium","questions":[{"id":"q1","prompt":"Full question text?","options":["Option A","Option B","Option C","Option D"],"answerIndex":0,"explanation":"Clear explanation of why this answer is correct, referencing the concept"}]}}],"followups":["Give me harder questions","Give me easier questions","Quiz me on a different topic","Explain the concept first"],"sources":[{"title":"CXC Syllabus 2025","url":"https://www.cxc.org"}]}`,
+REQUIRED: include "summary" (topic overview), "sections" (study notes, common errors), "nextAction".
+{"answer_markdown":"One sentence introducing the quiz topic","summary":"What this quiz covers and what to watch for","cards":[{"id":"card_quiz_1","type":"quiz","title":"[Subject] — [Topic] Practice","data":{"subject":"","topic":"","difficulty":"medium","questions":[{"id":"q1","prompt":"Full question text?","options":["Option A","Option B","Option C","Option D"],"answerIndex":0,"explanation":"Clear explanation of why this answer is correct, referencing the concept"}]}}],"sections":[{"id":"s1","title":"Key Concepts to Remember","icon":"📖","type":"text","content":"Brief revision notes on the core concepts tested in this quiz."},{"id":"s2","title":"Common Errors","icon":"⚠️","type":"checklist","items":["Common mistake 1","Common mistake 2","Common mistake 3"]}],"assumptions":["CXC standard level","2025–2026 syllabus"],"nextAction":"Complete all 5 questions, then review explanations","followups":[{"type":"progress","text":"Give me harder questions"},{"type":"refine","text":"Quiz me on a different topic"},{"type":"expand","text":"Explain the core concept first"},{"type":"convert","text":"Turn into a study sheet"}],"sources":[{"title":"CXC Syllabus 2025","url":"https://www.cxc.org"}]}`,
 
   invoice:`
 WORKFLOW: Invoice Generator. Return ONLY valid JSON — no markdown, no backticks.
 Generate a professional invoice with GCT calculation. GCT rate is 15%.
-{"answer_markdown":"One sentence confirming the invoice","cards":[{"id":"card_invoice_1","type":"invoice","title":"Invoice — [Service Description]","data":{"from":"[Business/Name if mentioned, else 'Your Business']","to":"[Client name if mentioned, else 'Client']","invoiceNum":"INV-001","issueDate":"[Today]","dueDate":"[14 days from today or as stated]","items":[{"description":"[Service/item]","qty":1,"unitPrice":0,"amount":0}],"subtotal":0,"gct":0,"total":0,"currency":"JMD","paymentNote":"Payment via Lynk, bank transfer, or cash","legalNote":"Thank you for your business."}}],"followups":["Add another line item","Remove GCT","Change currency to USD","Generate a Lynk payment link","Make it more formal"],"sources":[]}`
+REQUIRED: include "summary", "assumptions", "nextAction".
+{"answer_markdown":"One sentence confirming the invoice","summary":"Invoice total and key payment details at a glance","cards":[{"id":"card_invoice_1","type":"invoice","title":"Invoice — [Service Description]","data":{"from":"[Business/Name if mentioned, else 'Your Business']","to":"[Client name if mentioned, else 'Client']","invoiceNum":"INV-001","issueDate":"[Today]","dueDate":"[14 days from today or as stated]","items":[{"description":"[Service/item]","qty":1,"unitPrice":0,"amount":0}],"subtotal":0,"gct":0,"total":0,"currency":"JMD","paymentNote":"Payment via Lynk, bank transfer, or cash","legalNote":"Thank you for your business."}}],"sections":[],"assumptions":["GCT at 15%","JMD currency unless stated","Payment due in 14 days"],"nextAction":"Share with client via WhatsApp or email","followups":[{"type":"refine","text":"Add another line item"},{"type":"refine","text":"Remove GCT"},{"type":"refine","text":"Change currency to USD"},{"type":"convert","text":"Generate Lynk payment link"},{"type":"refine","text":"Make it more formal"}],"sources":[]}`
 };
 
-// Workflow-specific follow-ups (used as fallback when JSON followups are empty)
+// Workflow-specific follow-ups — typed format for Phase 3
 const WORKFLOW_FOLLOWUPS={
-  trip:["Make it cheaper","Show family-friendly options","Switch destination","Add food recommendations","Show transport details"],
-  civic:["What documents do I need?","Show fees only","What are the office hours?","What if my document is lost?","Show me a checklist"],
-  crop:["What if it keeps spreading?","Show organic treatment","Show chemical treatment","Prevention tips for next season","Call RADA"],
-  quiz:["Give me harder questions","Try a different topic","Explain this concept","Give me more questions","Show study tips"],
-  invoice:["Add GCT calculation","Change to USD","Add another item","Generate Lynk link","Make it more formal"],
+  trip:[
+    {type:'refine',text:'Make it cheaper'},
+    {type:'refine',text:'Family-friendly options'},
+    {type:'refine',text:'Switch destination'},
+    {type:'expand',text:'Add food recommendations'},
+    {type:'convert',text:'WhatsApp-ready summary'},
+  ],
+  civic:[
+    {type:'clarify',text:'What documents do I need?'},
+    {type:'refine',text:'Show fees only'},
+    {type:'expand',text:'What are the office hours?'},
+    {type:'clarify',text:'What if my document is lost?'},
+    {type:'convert',text:'Turn into printable checklist'},
+  ],
+  crop:[
+    {type:'clarify',text:'What if it keeps spreading?'},
+    {type:'refine',text:'Show organic treatment'},
+    {type:'refine',text:'Show chemical treatment'},
+    {type:'progress',text:'Prevention tips for next season'},
+    {type:'expand',text:'Call RADA for help'},
+  ],
+  quiz:[
+    {type:'progress',text:'Give me harder questions'},
+    {type:'refine',text:'Try a different topic'},
+    {type:'expand',text:'Explain this concept'},
+    {type:'progress',text:'Give me more questions'},
+    {type:'convert',text:'Turn into study sheet'},
+  ],
+  invoice:[
+    {type:'refine',text:'Add GCT calculation'},
+    {type:'refine',text:'Change to USD'},
+    {type:'refine',text:'Add another item'},
+    {type:'convert',text:'Generate Lynk link'},
+    {type:'refine',text:'Make it more formal'},
+  ],
   general:[]
 };
 
 function contextAssembler(modeKey,agent,intent){
-  let sys=BASE_SYSTEM+'\n\n'+MODES[modeKey].prefix+'\n\n'+agent.sys;
+  const domainFence=`\n\nIMPORTANT: You are ${agent.n}, the ${agent.role} specialist. Strictly stay within your domain. If a question is outside your specialty, do NOT answer it — redirect the user to the correct specialist instead.`;
+  let sys=BASE_SYSTEM+domainFence+'\n\n'+MODES[modeKey].prefix+'\n\n'+agent.sys;
   if(intent.needsCards&&CARD_SCHEMAS[intent.type])sys+=CARD_SCHEMAS[intent.type];
   return sys;
 }
 
-// ── CARD PARSER ──
+// ── CARD PARSER — Phase 3 aware ──
 function parseCardResponse(text){
   let t=text.trim().replace(/^```(?:json)?\s*/,'').replace(/\s*```$/,'').trim();
   const s=t.indexOf('{'),e=t.lastIndexOf('}');
   if(s===-1||e===-1)return null;
   try{const p=JSON.parse(t.slice(s,e+1));return(p.cards&&p.cards.length)?p:null;}catch{return null;}
+}
+
+// ═══════════════════════════════════════
+// PHASE 3 — RICH RESPONSE SYSTEM
+// ═══════════════════════════════════════
+
+// ── State for context panel ──
+let _ctxTab='sources';
+let _lastP3Data=null; // stores last parsed Phase 3 response
+
+// ── Summary Block ──
+function renderSummaryBlock(summary,icon){
+  if(!summary)return'';
+  return`<div class="resp-summary"><div class="resp-summary-icon">${icon||'💡'}</div><div class="resp-summary-body"><div class="resp-summary-label">Key Takeaway</div><div class="resp-summary-text">${esc(summary)}</div></div></div>`;
+}
+
+// ── Assumption Pills ──
+function renderAssumptionPills(assumptions){
+  if(!assumptions?.length)return'';
+  const pills=assumptions.map(a=>`<div class="p3-assumption"><div class="p3-assumption-dot"></div><span>${esc(a)}</span></div>`).join('');
+  return`<div><div class="p3-assumption-label">Based on</div><div class="p3-assumptions">${pills}</div></div>`;
+}
+
+// ── Warning Boxes ──
+function renderWarnings(warnings){
+  if(!warnings?.length)return'';
+  const icons={warn:'⚠️',danger:'🚨',tip:'💡',info:'ℹ️'};
+  return warnings.map(w=>`<div class="p3-warning ${w.type||'tip'}"><div class="p3-warn-icon">${icons[w.type]||'💡'}</div><div class="p3-warn-body">${w.title?`<div class="p3-warn-title">${esc(w.title)}</div>`:''}${esc(w.body||'')}</div></div>`).join('');
+}
+
+// ── Section Renderer ──
+function renderSectionContent(sec){
+  if(sec.type==='text'){
+    return`<div class="exp-body" id="${sec.id}-body">${fmt(sec.content||'')}</div>`;
+  }
+  if(sec.type==='checklist'){
+    const items=(sec.items||[]).map((it,i)=>{
+      const id=`${sec.id}-cl-${i}`;
+      return`<div class="p3-cl-item" id="${id}" onclick="toggleCl('${id}')"><div class="p3-cl-box" id="${id}-box"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" style="display:none" id="${id}-chk"><polyline points="20 6 9 17 4 12"/></svg></div><div class="p3-cl-text">${esc(it)}</div></div>`;
+    }).join('');
+    return`<div class="exp-body" id="${sec.id}-body"><div class="p3-checklist">${items}</div></div>`;
+  }
+  if(sec.type==='fees'){
+    const rows=(sec.items||[]).map(it=>`<tr><td>${esc(it.label||'')}</td><td>${esc(it.value||it.amount||'')}</td></tr>`).join('');
+    return`<div class="exp-body" id="${sec.id}-body"><table class="p3-fee-table">${rows}</table>${sec.note?`<div class="p3-fee-note">${esc(sec.note)}</div>`:''}</div>`;
+  }
+  if(sec.type==='timeline'){
+    const nodes=(sec.items||[]).map((it,i)=>`<div class="p3-tl-node"><div class="p3-tl-left"><div class="p3-tl-dot">${i+1}</div><div class="p3-tl-line"></div></div><div class="p3-tl-content"><div class="p3-tl-title">${esc(it.title||'')}</div>${it.desc?`<div class="p3-tl-desc">${esc(it.desc)}</div>`:''}${it.meta?`<div class="p3-tl-meta">${esc(it.meta)}</div>`:''}</div></div>`).join('');
+    return`<div class="exp-body" id="${sec.id}-body"><div class="p3-timeline">${nodes}</div></div>`;
+  }
+  if(sec.type==='comparison'){
+    const left=sec.left||{};const right=sec.right||{};
+    const leftItems=(left.items||[]).map(it=>`<div class="p3-cmp-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--gn)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>${esc(it)}</div>`).join('');
+    const rightItems=(right.items||[]).map(it=>`<div class="p3-cmp-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--bl)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>${esc(it)}</div>`).join('');
+    return`<div class="exp-body" id="${sec.id}-body"><div class="p3-comparison"><div class="p3-cmp-col"><div class="p3-cmp-hdr positive">${esc(left.label||'Option A')}</div><div class="p3-cmp-body">${leftItems}</div></div><div class="p3-cmp-col"><div class="p3-cmp-hdr">${esc(right.label||'Option B')}</div><div class="p3-cmp-body">${rightItems}</div></div></div></div>`;
+  }
+  return`<div class="exp-body" id="${sec.id}-body">${fmt(sec.content||JSON.stringify(sec))}</div>`;
+}
+
+// ── Expandable Sections Group ──
+function renderExpandableSections(sections){
+  if(!sections?.length)return'';
+  const secs=sections.map((sec,i)=>{
+    const id=sec.id||`sec-${i}`;
+    const isOpen=i===0;
+    return`<div class="exp-section">
+      <div class="exp-hdr ${isOpen?'open':''}" onclick="toggleExpSection('${id}')">
+        <span class="exp-hdr-icon">${sec.icon||'📋'}</span>
+        <span class="exp-hdr-label">${esc(sec.title||'Section')}</span>
+        ${sec.meta?`<span class="exp-hdr-meta">${esc(sec.meta)}</span>`:''}
+        <svg class="exp-chev" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+      ${renderSectionContent({...sec,id})}
+    </div>`;
+  }).join('');
+  return`<div class="exp-group">${secs}</div>`;
+}
+function toggleExpSection(id){
+  const body=document.getElementById(id+'-body');
+  if(!body)return;
+  const hdr=body.previousElementSibling;
+  const isOpen=body.classList.toggle('show');
+  if(hdr)hdr.classList.toggle('open',isOpen);
+}
+
+// ── Typed Follow-ups ──
+function renderTypedFollowups(followups){
+  if(!followups?.length)return'';
+  // Support both {type,text} objects and plain strings
+  const typeConfig={
+    clarify:{label:'Clarify',class:'clarify'},
+    refine:{label:'Refine',class:'refine'},
+    expand:{label:'More',class:'expand'},
+    convert:{label:'Convert',class:'convert'},
+    progress:{label:'Next',class:'progress'},
+  };
+  const chips=followups.slice(0,5).map(f=>{
+    const text=typeof f==='string'?f:(f.text||f);
+    const type=typeof f==='object'?f.type:'';
+    const cfg=typeConfig[type]||{label:'',class:''};
+    const tag=cfg.label?`<span class="fup-tag">${cfg.label}</span>`:'';
+    return`<button class="fup-t ${cfg.class}" onclick="cfill('${text.replace(/'/g,"&#39;")}')">${tag}${esc(text)}</button>`;
+  }).join('');
+  return`<div class="fup-typed-group">${chips}</div>`;
+}
+
+// ── Next Best Action ──
+function renderNextAction(nextAction){
+  if(!nextAction)return'';
+  return`<div class="p3-nba"><div class="p3-nba-icon">▶</div><span class="p3-nba-label">Next Step</span><span style="flex:1;font-size:12.5px;color:var(--tx)">${esc(nextAction)}</span><button class="p3-nba-btn" onclick="cfill('${nextAction.replace(/'/g,"&#39;")}')">Do this</button></div>`;
+}
+
+// ── Full Rich Response Renderer ──
+function renderRichResponse(parsed){
+  let html='';
+  const modeShape={ask:'💬 Ask',think:'🧠 Think',research:'🔍 Research',build:'🏗️ Build',act:'⚡ Act'};
+  // Mode badge
+  html+=`<div class="resp-mode-shape ${mode}">${modeShape[mode]||mode}</div>`;
+  // Intro text
+  if(parsed.answer_markdown)html+=fmt(parsed.answer_markdown);
+  // Summary block
+  if(parsed.summary)html+=renderSummaryBlock(parsed.summary);
+  // Cards
+  if(parsed.cards?.length)html+=renderCards(parsed.cards);
+  // Warnings
+  if(parsed.warnings?.length)html+=renderWarnings(parsed.warnings);
+  // Expandable sections
+  if(parsed.sections?.length)html+=renderExpandableSections(parsed.sections);
+  // Assumptions
+  if(parsed.assumptions?.length)html+=renderAssumptionPills(parsed.assumptions);
+  // Next action
+  if(parsed.nextAction)html+=renderNextAction(parsed.nextAction);
+  return html;
+}
+
+// ── Checklist toggle ──
+function toggleCl(id){
+  const item=document.getElementById(id);
+  const box=document.getElementById(id+'-box');
+  const chk=document.getElementById(id+'-chk');
+  if(!item)return;
+  const done=item.classList.toggle('checked');
+  if(chk)chk.style.display=done?'block':'none';
+  if(box){box.style.background=done?'var(--gn)':'';box.style.borderColor=done?'var(--gn)':'var(--br2)';}
 }
 
 // ═══════════════════════════════════════
@@ -1211,24 +2082,27 @@ function toggleTripDay(hId,bId){const h=document.getElementById(hId),b=document.
 // ═══════════════════════════════════════
 const KEY='sk-ecfd0f1a966b44dc96e6db963968c731';
 let curAg=null,msgs=[],busy=false,ctxOpen=false,mode='ask',abortCtrl=null,lastSources=[],lastCards=[],dark=false,specFolderOpen=true,libOpen=false,_prevCtxFocus=null,_lastIntentType='general';
+let intelligenceMode='auto'; // 'auto' | 'fast' | 'thinking'
 
 function lsvg(s=24){return`<svg width="${s}" height="${s}" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="3.6" fill="var(--gd)"/><ellipse cx="20" cy="9.5" rx="3.2" ry="6.2" fill="var(--gd)" opacity=".9"/><ellipse cx="29.1" cy="15" rx="3.2" ry="6.2" fill="var(--gd)" opacity=".76" transform="rotate(72 29.1 15)"/><ellipse cx="25.4" cy="26.8" rx="3.2" ry="6.2" fill="var(--gd)" opacity=".7" transform="rotate(144 25.4 26.8)"/><ellipse cx="14.6" cy="26.8" rx="3.2" ry="6.2" fill="var(--gd)" opacity=".7" transform="rotate(216 14.6 26.8)"/><ellipse cx="10.9" cy="15" rx="3.2" ry="6.2" fill="var(--gd)" opacity=".76" transform="rotate(288 10.9 15)"/></svg>`}
 
 // activate() removed — key hardcoded
 
 window.addEventListener('load',()=>{
-  ['sb-logo','tb-logo'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=lsvg(id==='sb-logo'?22:17);});  document.getElementById('themeBtn3')&&(document.getElementById('themeBtn3').innerHTML=dark?SVG.sun:SVG.moon);
+  ['sb-logo','tb-logo'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=lsvg(id==='sb-logo'?22:17);});
   setThIcons();
   init();
   document.addEventListener('click',e=>{
     if(!e.target.closest('#mode-menu')&&!e.target.closest('.mode-btn')&&!e.target.closest('.hdr-badge'))closeModeMenu();
     if(!e.target.closest('#spec-picker')&&!e.target.closest('.hdr-spec-btn'))closeSpecPicker();
+    if(!e.target.closest('#intel-menu')&&!e.target.closest('.intel-btn'))closeIntelMenu();
   });
   document.addEventListener('keydown',e=>{
     if(e.key==='Escape'){
+      if(document.getElementById('settings-overlay')?.classList.contains('show')){closeSettings();return;}
       if(libOpen){closeLib();return;}
       if(ctxOpen){closeCtx();return;}
-      closeModeMenu();closeSpecPicker();
+      closeModeMenu();closeSpecPicker();closeIntelMenu();
     }
   });
 });
@@ -1238,26 +2112,52 @@ function soon(){closeSb();alert('Coming soon — on the roadmap.');}
 function openSb(){const sb=document.getElementById('sb');sb.classList.add('open');const ov=document.getElementById('sb-overlay');ov.style.display='block';requestAnimationFrame(()=>ov.classList.add('show'));document.body.style.overflow='hidden';}
 function closeSb(){document.getElementById('sb').classList.remove('open');const ov=document.getElementById('sb-overlay');ov.classList.remove('show');setTimeout(()=>{ov.style.display='none'},300);document.body.style.overflow='';}
 function toggleTheme(){dark=!dark;document.documentElement.setAttribute('data-theme',dark?'dark':'light');setThIcons();}
-function setThIcons(){const ic=dark?SVG.sun:SVG.moon;['themeBtn','themeBtn2','themeBtn3'].forEach(id=>{const b=document.getElementById(id);if(b)b.innerHTML=ic;});}
+function setThIcons(){const ic=dark?SVG.sun:SVG.moon;const b=document.getElementById('themeBtn');if(b)b.innerHTML=ic;}
 
-// ── SPECIALIST FOLDER (sidebar) ──
-function toggleSpecFolder(){
-  specFolderOpen=!specFolderOpen;
-  document.getElementById('sb-spec-folder').classList.toggle('open',specFolderOpen);
-  document.getElementById('sb-spec-inner').classList.toggle('show',specFolderOpen);
-}
+// ── SPECIALIST SIDEBAR — flat list ──
 function buildSb(){
-  const pinned=PINNED_IDS.map(id=>AG_MAP[id]).filter(Boolean);
-  document.getElementById('sb-pinned').innerHTML=pinned.map(a=>`<div class="sb-pinned-item ${curAg?.id===a.id?'act':''}" onclick="startChat('${a.id}');closeSb()"><span class="sb-pinned-dot" style="background:${a.c}"></span>${a.n}<span style="font-size:10px;color:var(--tx3);margin-left:auto">${a.role}</span></div>`).join('');
-  if(specFolderOpen){document.getElementById('sb-spec-folder').classList.add('open');document.getElementById('sb-spec-inner').classList.add('show');}
+  const container=document.getElementById('sb-specialists');
+  if(!container)return;
+  container.innerHTML=AG.map(a=>`<div class="sb-spec-item ${curAg?.id===a.id?'act':''}" id="sb-ag-${a.id}" onclick="startChat('${a.id}');closeSb()"><span class="sb-spec-dot" style="background:${a.c}"></span><span class="sb-spec-name">${a.n}</span><span class="sb-spec-role">${a.role}</span></div>`).join('');
 }
 function syncSb(){
-  document.querySelectorAll('.sb-pinned-item').forEach(e=>e.classList.remove('act'));
-  if(curAg){document.querySelectorAll(`.sb-pinned-item`).forEach(e=>{if(e.onclick?.toString().includes(`'${curAg.id}'`))e.classList.add('act');});}
+  document.querySelectorAll('.sb-spec-item').forEach(e=>e.classList.remove('act'));
+  if(curAg)document.getElementById('sb-ag-'+curAg.id)?.classList.add('act');
   document.getElementById('nav-home')?.classList.toggle('act',!curAg);
 }
 
-// ── SPECIALIST LIBRARY ──
+// ── SETTINGS ──
+function openSettings(){
+  const overlay=document.getElementById('settings-overlay');
+  if(!overlay)return;
+  // sync toggle states
+  const dt=document.getElementById('dark-toggle');
+  if(dt)dt.classList.toggle('on',dark);
+  const ait=document.getElementById('auto-intel-toggle');
+  if(ait)ait.classList.toggle('on',intelligenceMode==='auto');
+  overlay.style.display='flex';
+  requestAnimationFrame(()=>overlay.classList.add('show'));
+}
+function closeSettings(){
+  const overlay=document.getElementById('settings-overlay');
+  if(!overlay)return;
+  overlay.classList.remove('show');
+  setTimeout(()=>{overlay.style.display='none';},260);
+}
+function settingsOverlayClick(e){
+  if(e.target===document.getElementById('settings-overlay'))closeSettings();
+}
+function toggleThemeFromSettings(){
+  toggleTheme();
+  const dt=document.getElementById('dark-toggle');
+  if(dt)dt.classList.toggle('on',dark);
+}
+function toggleAutoIntel(){
+  const wasAuto=intelligenceMode==='auto';
+  setIntelMode(wasAuto?'fast':'auto');
+  const ait=document.getElementById('auto-intel-toggle');
+  if(ait)ait.classList.toggle('on',!wasAuto);
+}
 function openLib(){
   libOpen=true;
   const overlay=document.getElementById('lib-overlay');
@@ -1322,6 +2222,73 @@ function openSpecPicker(e){
 }
 function closeSpecPicker(){document.getElementById('spec-picker').style.display='none';}
 
+// ═══════════════════════════════════════
+// INTELLIGENCE MODE — Auto / Fast / Thinking
+// Routes between standard and reasoning models.
+// No vendor names exposed in UI.
+// ═══════════════════════════════════════
+const INTEL_MODELS={
+  fast:'deepseek-chat',
+  thinking:'deepseek-reasoner',
+};
+const INTEL_CONFIG={
+  auto:{label:'Auto',icon:'✦',desc:'Picks the right engine for each question'},
+  fast:{label:'Fast',icon:'⚡',desc:'Quick, clear answers for everyday questions'},
+  thinking:{label:'Thinking',icon:'🧠',desc:'Deep reasoning for complex problems'},
+};
+
+// Signals that warrant the reasoning model in Auto mode
+const THINKING_SIGNALS=/\bwhy\b.{0,60}\b(really|actually|deep|explain|reason|cause|mean|work)\b|compare\b.{0,40}\bvs\b|analyse|analyze|debate|argue|pros.{0,10}cons|step.by.step.*math|solve.*equation|prove|theorem|philosophy|strategy|implications|evaluate|critique|ethical|moral|trade.?off|how does.{0,30}work|explain.*in depth|difference between.*and/i;
+
+function resolveModel(txt){
+  if(intelligenceMode==='fast')return{model:'deepseek-chat',isReasoner:false};
+  if(intelligenceMode==='thinking')return{model:'deepseek-reasoner',isReasoner:true};
+  // Auto: use reasoning model for signals, standard otherwise
+  const useReasoner=THINKING_SIGNALS.test(txt)||mode==='think';
+  return{model:useReasoner?'deepseek-reasoner':'deepseek-chat',isReasoner:useReasoner};
+}
+
+function intelBtnHtml(){
+  const cfg=INTEL_CONFIG[intelligenceMode];
+  return`<span class="intel-dot"></span>${cfg.icon} ${cfg.label}${SVG.chevD}`;
+}
+
+function openIntelMenu(e){
+  e.stopPropagation();
+  const menu=document.getElementById('intel-menu');
+  const isOpen=menu.classList.contains('open');
+  closeIntelMenu();closeModeMenu();closeSpecPicker();
+  if(isOpen)return;
+  menu.innerHTML=`<div class="intel-menu-head">Intelligence</div>`+
+    Object.entries(INTEL_CONFIG).map(([k,cfg])=>`
+      <div class="intel-opt ${k}${intelligenceMode===k?' act':''}" onclick="setIntelMode('${k}')">
+        <div class="intel-opt-icon">${cfg.icon}</div>
+        <div class="intel-opt-body">
+          <div class="intel-opt-name">${cfg.label}</div>
+          <div class="intel-opt-desc">${cfg.desc}</div>
+        </div>
+        <div class="intel-opt-check">${SVG.check}</div>
+      </div>`).join('');
+  const r=e.currentTarget.getBoundingClientRect();
+  let l=r.right-232,t=r.top-8;
+  // open above the button
+  if(t-160<8)t=r.bottom+5;
+  else t=r.top-180;
+  menu.style.left=Math.max(8,l)+'px';
+  menu.style.top=Math.max(8,t)+'px';
+  menu.classList.add('open');
+}
+function closeIntelMenu(){document.getElementById('intel-menu')?.classList.remove('open');}
+function setIntelMode(m){
+  intelligenceMode=m;
+  closeIntelMenu();
+  // Update all intel buttons in DOM
+  document.querySelectorAll('.intel-btn').forEach(btn=>{
+    btn.className=`intel-btn ${m}`;
+    btn.innerHTML=intelBtnHtml();
+  });
+}
+
 // ── MODE MENU ──
 function buildModeMenu(){
   document.getElementById('mode-menu').innerHTML='<div class="mm-head">Mode</div>'+
@@ -1381,7 +2348,7 @@ function goHome(){
           <div class="tb-sep"></div>
           <button class="mode-btn ${mode}" onclick="openModeMenu(event)">${modeBtnHtml()}</button>
         </div>
-        <div class="in-right"><div class="pwr-tag"><span class="pwr-dot"></span>DeepSeek</div></div>
+        <div class="in-right"><button class="intel-btn ${intelligenceMode}" onclick="openIntelMenu(event)" aria-label="Intelligence mode">${intelBtnHtml()}</button></div>
       </div>
     </div>
   </div>
@@ -1389,8 +2356,7 @@ function goHome(){
   <div class="sug-chips">${chipHtml}</div>
 </div></div>`;
   if(window.innerWidth>700)setTimeout(()=>document.getElementById('hta')?.focus(),80);
-  // sync theme button in sidebar footer
-  const tb3=document.getElementById('themeBtn3');if(tb3)tb3.innerHTML=dark?SVG.sun:SVG.moon;
+  setThIcons();
 }
 
 function startChatFromHome(id){startChat(id);}
@@ -1407,15 +2373,29 @@ async function hsubmit(){
 }
 function pickAg(t){
   t=t.toLowerCase();
-  if(/cxc|pep|heart|math|exam|study|school|cape|grade|quiz.*learn/.test(t))return AG_MAP['kayla'];
-  if(/farm|crop|yam|banana|jamis|rada|agriculture|pest|harvest/.test(t))return AG_MAP['delroy'];
-  if(/tour|hotel|trip|negril|kingston|travel|beach|itinerary/.test(t))return AG_MAP['nadine'];
-  if(/sell|sale|deal|booking|close|lead|pitch/.test(t))return AG_MAP['shamar'];
-  if(/complaint|service|refund|support|order/.test(t))return AG_MAP['sashoy'];
-  if(/market|promo|advert|whatsapp|instagram|campaign/.test(t))return AG_MAP['bounty'];
-  if(/invoice|lynk|pay|gct|finance|tax|accounting/.test(t))return AG_MAP['kemar'];
-  if(/music|dancehall|reggae|party|event|sound|concert/.test(t))return AG_MAP['rastajay'];
-  if(/passport|trn|nis|nht|government|form|birth|licence|pica/.test(t))return AG_MAP['oneil'];
+  // Education — academic subjects, exams, learning
+  if(/cxc|pep|heart|math|exam|study|school|cape|grade|algebra|calculus|biology|chemistry|physics|geography|english.*lit|poem|essay|homework|tutor|learn/.test(t))return AG_MAP['kayla'];
+  // Agriculture — farming, crops, land
+  if(/farm|crop|yam|banana|jamis|rada|agriculture|pest|harvest|planting|soil|fertiliz|irrigation|ackee|coffee|scotch bonnet|breadfruit/.test(t))return AG_MAP['delroy'];
+  // Tourism — travel, places, hotels
+  if(/tour|hotel|trip|negril|kingston|travel|beach|itinerary|airbnb|resort|ocho rios|montego|portland|blue mountain/.test(t))return AG_MAP['nadine'];
+  // Culture & history — music, Jamaican heritage, history, notable figures
+  if(/nanny|maroon|history|heritage|culture|dancehall|reggae|music|artist|sound|concert|sumfest|bob marley|marcus garvey|emancipation|slavery|independence|national hero|jamaican.*history|history.*jamaica/.test(t))return AG_MAP['rastajay'];
+  // Government — civic processes, documents, public services
+  if(/passport|trn|nis|nht|government|form|birth cert|licence|pica|voter|path benefit|tax.*return|taj|government.*service/.test(t))return AG_MAP['oneil'];
+  // Finance — money, invoices, tax, accounting
+  if(/invoice|lynk|pay|gct|finance|tax|accounting|salary|payroll|gct.*calc|budget|bookkeep/.test(t))return AG_MAP['kemar'];
+  // Marketing — ads, social media, promotions
+  if(/market|promo|advert|whatsapp.*blast|instagram|campaign|flyer|brand/.test(t))return AG_MAP['bounty'];
+  // Sales — leads, deals, pitches
+  if(/sell|sale|deal|booking|close.*deal|lead|pitch|proposal/.test(t))return AG_MAP['shamar'];
+  // Customer support — complaints, service issues
+  if(/complaint|refund|support|order.*issue|customer service|escalate/.test(t))return AG_MAP['sashoy'];
+  // Small biz ops — registration, utilities, remittance
+  if(/jbro|register.*business|business.*register|remittance|jps|nwc|lynk.*setup|cbdc|internet plan/.test(t))return AG_MAP['biggs'];
+  // Default — general Jamaican knowledge goes to Rasta Jay (culture), 
+  // general business questions go to Biggs, but anything cultural/historical → Rasta Jay
+  if(/who is|what is|when did|where is|jamaica|jamaican/.test(t))return AG_MAP['rastajay'];
   return AG_MAP['biggs'];
 }
 function sleep(ms){return new Promise(r=>setTimeout(r,ms));}
@@ -1446,7 +2426,7 @@ function renderChat(){
   <div class="dock" style="padding-top:5px">
     ${toolStripHtml}
     <div class="inbox" style="margin-top:${agTools.length?'5px':'0'}"><div class="in-top"><textarea class="ta" id="cta" rows="1" placeholder="Type in Patwa or English…" onkeydown="ckey(event)" oninput="ar(this)"></textarea><button class="sbtn" id="csend" onclick="doSend()" aria-label="Send">${SVG.send}</button></div>
-    <div class="in-bot"><div class="in-left"><button class="tb-btn" onclick="pickFile()" title="Attach file">${SVG.attach}</button><div class="tb-sep"></div><button class="mode-btn ${mode}" onclick="openModeMenu(event)">${modeBtnHtml()}</button></div><div class="in-right"><div class="pwr-tag"><span class="pwr-dot"></span>DeepSeek</div></div></div></div>
+    <div class="in-bot"><div class="in-left"><button class="tb-btn" onclick="pickFile()" title="Attach file">${SVG.attach}</button><div class="tb-sep"></div><button class="mode-btn ${mode}" onclick="openModeMenu(event)">${modeBtnHtml()}</button></div><div class="in-right"><button class="intel-btn ${intelligenceMode}" onclick="openIntelMenu(event)" aria-label="Intelligence mode">${intelBtnHtml()}</button></div></div></div>
   </div>
 </div>`;
   if(window.innerWidth>700)setTimeout(()=>document.getElementById('cta')?.focus(),80);
@@ -1477,23 +2457,37 @@ function closeCtx(){
   document.getElementById('ctx-btn')?.classList.remove('act');
   if(_prevCtxFocus){_prevCtxFocus.focus();_prevCtxFocus=null;}
 }
-function updateCtxContent(type){
+// ── Context Panel Phase 3 — tabbed ──
+function switchCtxTab(tab){
+  _ctxTab=tab;
+  document.querySelectorAll('.cp-tab').forEach(el=>{
+    el.classList.toggle('act',el.dataset.tab===tab);
+  });
+  renderCtxTab(tab);
+}
+function renderCtxTab(tab){
   const body=document.getElementById('cp-body');
-  const title=document.getElementById('cp-title');
-  const badge=document.getElementById('cp-badge');
   if(!body)return;
-  if(type==='cards'||(!type&&lastCards.length)){
-    if(title)title.textContent='Generated Cards';
-    if(badge){badge.textContent='Workspace';badge.style.background='var(--gd-l)';badge.style.color='var(--gd)';}
-    if(!lastCards.length){body.innerHTML=`<div class="cp-empty">Use <strong>Build</strong> mode to generate workspace cards.</div>`;return;}
-    body.innerHTML=`<div style="font-size:12px;color:var(--tx2);margin-bottom:8px">${lastCards.length} card${lastCards.length>1?'s':''} generated</div>`+lastCards.map(c=>`<div class="sp-item"><div class="sp-src"><span class="sp-dot" style="background:${c.type==='trip'?'var(--bl)':c.type==='civic'?'var(--gd)':c.type==='crop'?'#3ab898':'#a870cc'}"></span>${c.type.toUpperCase()}</div><div class="sp-t">${esc(c.title||'Card')}</div></div>`).join('');
-  }else{
-    if(title)title.textContent='Sources';
-    if(badge){badge.textContent='Sources';badge.style.background='';badge.style.color='';}
+  if(tab==='sources'){
     if(!lastSources.length){body.innerHTML=`<div class="cp-empty">No sources yet.<br/>Send a message to see references.</div>`;return;}
     body.innerHTML=lastSources.map(s=>{const[t,src]=s.split(' – ');return`<div class="sp-item"><div class="sp-src"><span class="sp-dot"></span>${src||'LIGNUM Dataset'}</div><div class="sp-t">${t}</div><div class="sp-r">Relevance ${85+Math.floor(Math.random()*13)}% · Updated recently</div></div>`;}).join('')+`<div class="sp-note">Jamaican public datasets updated weekly · National AI Lab, Kingston</div>`;
+  }else if(tab==='details'){
+    if(lastCards.length){
+      body.innerHTML=`<div class="cp-category-lbl">Generated Cards</div>`+lastCards.map(c=>`<div class="cp-detail-item"><div class="cp-detail-title">${esc(c.title||'Card')}</div><span style="font-size:10px;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px;font-weight:700">${c.type}</span></div>`).join('');
+    }else{
+      body.innerHTML=`<div class="cp-empty">No details yet.<br/>Use <strong>Build</strong> mode for rich cards.</div>`;
+    }
+  }else if(tab==='assumptions'){
+    const a=_lastP3Data?.assumptions||[];
+    if(!a.length){body.innerHTML=`<div class="cp-empty">No assumptions tracked yet.</div>`;return;}
+    body.innerHTML=`<div class="cp-category-lbl">Assumptions Used</div>`+a.map(s=>`<div class="cp-detail-item"><div style="display:flex;align-items:center;gap:6px"><div class="p3-assumption-dot"></div>${esc(s)}</div></div>`).join('');
+  }else if(tab==='related'){
+    const fups=_lastP3Data?.followups||[];
+    if(!fups.length){body.innerHTML=`<div class="cp-empty">No related suggestions yet.</div>`;return;}
+    body.innerHTML=`<div class="cp-category-lbl">Follow-up Options</div>`+fups.map(f=>{const text=typeof f==='string'?f:f.text;return`<div class="cp-detail-item" style="cursor:pointer" onclick="cfill('${text.replace(/'/g,"&#39;")}');closeCtx()">${esc(text)}</div>`;}).join('');
   }
 }
+function updateCtxContent(type){renderCtxTab(_ctxTab||'sources');}
 
 // ═══════════════════════════════════════
 // TOOL LAUNCHER — routes tool clicks
@@ -1827,18 +2821,21 @@ async function doSend(){
   _lastIntentType=intent.type;
   const systemPrompt=contextAssembler(mode,curAg,intent);
   const m=MODES[mode];
-  const useCards=intent.needsCards&&m.model!=='deepseek-reasoner';
-  const shouldStream=useCards?false:m.stream;
-  const bodyObj={model:m.model,messages:[{role:'system',content:systemPrompt},...msgs.slice(-14)],max_tokens:useCards?Math.max(m.tokens,1400):m.tokens,stream:shouldStream};
-  if(m.temp!==null&&!useCards)bodyObj.temperature=m.temp;
+  // Resolve model via intelligence mode — reasoner can't do JSON cards
+  const resolved=resolveModel(txt);
+  const useCards=intent.needsCards&&!resolved.isReasoner;
+  const shouldStream=useCards?false:(resolved.isReasoner?true:m.stream);
+  const effectiveModel=resolved.model;
+  const bodyObj={model:effectiveModel,messages:[{role:'system',content:systemPrompt},...msgs.slice(-14)],max_tokens:useCards?Math.max(m.tokens,1400):m.tokens,stream:shouldStream};
+  if(m.temp!==null&&!resolved.isReasoner&&!useCards)bodyObj.temperature=m.temp;
   if(useCards)bodyObj.response_format={type:'json_object'};
   try{
     abortCtrl=new AbortController();
   const url='https://api.deepseek.com/v1/chat/completions';
   const res=await fetch(url,{method:'POST',mode:'cors',credentials:'omit',headers:{'Content-Type':'application/json','Authorization':'Bearer '+KEY},body:JSON.stringify(bodyObj),signal:abortCtrl.signal});
     removeThinking(tid);
-    if(!res.ok){const e=await res.json().catch(()=>({}));const code=res.status;const msg=e.error?.message||(code===401?'Invalid API key — check your DeepSeek key.':code===429?'Rate limited — wait a moment and try again.':code===402?'Insufficient balance — top up your DeepSeek account at platform.deepseek.com.':code>=500?'DeepSeek upstream error — try again shortly.':`Error ${code}`);addErrBubble(msg);}
-    else if(shouldStream)await streamResp(res,src);
+    if(!res.ok){const e=await res.json().catch(()=>({}));const code=res.status;const msg=e.error?.message||(code===401?'Invalid API key — check your key in Settings.':code===429?'Rate limited — wait a moment and try again.':code===402?'Insufficient balance — please top up your account.':code>=500?'Server error — try again shortly.':`Error ${code}`);addErrBubble(msg);}
+    else if(shouldStream)await streamResp(res,src,resolved.isReasoner);
     else await jsonResp(res,src,intent);
   }catch(e){
     removeThinking(tid);
@@ -1854,15 +2851,21 @@ async function jsonResp(res,sources,intent){
   const parsed=parseCardResponse(raw);
   if(parsed){
     if(parsed.cards)lastCards.push(...parsed.cards);
-    const intro=parsed.answer_markdown?fmt(parsed.answer_markdown):'';
-    addFinalBubble(intro+renderCards(parsed.cards),sources,parsed.followups||[],'card');
+    _lastP3Data=parsed; // store for context panel
+    const richHtml=renderRichResponse(parsed);
+    // Typed follow-ups
+    const fups=parsed.followups||[];
+    addFinalBubble(richHtml,sources,fups,'card');
     if(parsed.sources?.length)lastSources=[...lastSources,...parsed.sources.map(s=>s.title+' – '+(s.url||'External'))].slice(0,4);
-  }else{addFinalBubble(fmt(raw),sources,[],'');}
+  }else{
+    _lastP3Data=null;
+    addFinalBubble(fmt(raw),sources,[],'');
+  }
   scrollBot();if(ctxOpen)updateCtxContent();
 }
-async function streamResp(res,sources){
+async function streamResp(res,sources,isReasoner){
   const reader=res.body.getReader(),dec=new TextDecoder();
-  let full='',reasoning='';const id='b'+Date.now();const isThink=mode==='think';
+  let full='',reasoning='';const id='b'+Date.now();const isThink=isReasoner||mode==='think';
   addStreamBubble(id);
   try{while(true){const{done,value}=await reader.read();if(done)break;const lines=dec.decode(value,{stream:true}).split('\n');for(const ln of lines){if(ln.startsWith('data: ')&&ln!=='data: [DONE]'){try{const d=JSON.parse(ln.slice(6));const rc=d.choices?.[0]?.delta?.reasoning_content||'';const c=d.choices?.[0]?.delta?.content||'';if(rc)reasoning+=rc;if(c)full+=c;updStream(id,full,reasoning,isThink);}catch{}}}}}catch{}
   finalStream(id,full,reasoning,sources,isThink);
@@ -1871,15 +2874,44 @@ async function streamResp(res,sources){
 function addUserBubble(txt){const area=document.getElementById('msgs');if(!area)return;const d=document.createElement('div');d.className='msg u fi';d.innerHTML=`<div class="m-body"><div class="m-bbl">${esc(txt)}</div><div class="m-time">${now()}</div></div>`;area.appendChild(d);scrollBot();}
 function addStreamBubble(id){const area=document.getElementById('msgs');if(!area)return;const a=curAg;const d=document.createElement('div');d.className='msg a fi';d.id=id;d.innerHTML=`<div class="m-av" style="background:${a.c}12;border-color:${a.c}25;color:${a.c}">${AIC[a.id]}</div><div class="m-body"><div class="m-bbl" id="${id}-bbl"><span class="cursor"></span></div></div>`;area.appendChild(d);scrollBot();}
 function updStream(id,text,reasoning,isThink){const bbl=document.getElementById(id+'-bbl');if(!bbl)return;let h='';if(isThink&&reasoning)h+=`<div class="think-block"><div class="think-hdr open" onclick="toggleThink(this)">${SVG.brain} Thinking… <svg class="chev" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg></div><div class="think-body show">${esc(reasoning).replace(/\n/g,'<br/>')}</div></div>`;h+=text?fmt(text)+'<span class="cursor"></span>':'<span class="cursor"></span>';bbl.innerHTML=h;scrollBot();}
-function finalStream(id,text,reasoning,sources,isThink){const bbl=document.getElementById(id+'-bbl');if(!bbl)return;let h='';if(isThink&&reasoning)h+=`<div class="think-block"><div class="think-hdr" onclick="toggleThink(this)">${SVG.brain} Thought through this <svg class="chev" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg></div><div class="think-body">${esc(reasoning).replace(/\n/g,'<br/>')}</div></div>`;h+=fmt(text);if(/pay|invoice|lynk|payment/i.test(text))h+=`<br/><button class="lynk-btn" onclick="doLynk()">${SVG.link} Pay via Lynk</button>`;bbl.className='m-bbl';bbl.innerHTML=h;appendMsgFooter(bbl.closest('.m-body'),id,sources,getFups(curAg),'general');}
+function finalStream(id,text,reasoning,sources,isThink){const bbl=document.getElementById(id+'-bbl');if(!bbl)return;let h='';
+  if(isThink&&reasoning){
+    // Phase 3 premium think block — parse reasoning into phases
+    const lines=reasoning.split('\n').filter(l=>l.trim());
+    let phases=[];
+    // Try to detect natural section breaks
+    let curPhase={label:'Considering',text:''};
+    for(const ln of lines){
+      if(/^(step|phase|first|then|finally|conclusion|so |therefore|in summary|the answer)/i.test(ln.trim())&&curPhase.text.length>80){
+        phases.push(curPhase);
+        curPhase={label:ln.length<60?ln.trim().replace(/[:：]$/,''):'Processing',text:''};
+      }else{
+        curPhase.text+=(curPhase.text?'\n':'')+ln;
+      }
+    }
+    if(curPhase.text)phases.push(curPhase);
+    if(phases.length<2){phases=[{label:'Reasoning',text:reasoning}];}
+    const phaseHtml=phases.map(p=>`<div class="think-phase"><div class="think-phase-label"><div class="think-phase-dot"></div>${esc(p.label)}</div><div class="think-phase-text">${esc(p.text)}</div></div>`).join('');
+    h+=`<div class="think-premium"><div class="think-premium-hdr" onclick="toggleThinkPremium(this)">${SVG.brain} Reasoning <span class="think-premium-tag">Think Mode</span><svg class="think-premium-chev" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg></div><div class="think-premium-body">${phaseHtml}</div></div>`;
+  }
+  h+=fmt(text);
+  if(/pay|invoice|lynk|payment/i.test(text))h+=`<br/><button class="lynk-btn" onclick="doLynk()">${SVG.link} Pay via Lynk</button>`;
+  bbl.className='m-bbl';bbl.innerHTML=h;
+  appendMsgFooter(bbl.closest('.m-body'),id,sources,getFups(curAg),'general');
+}
+function toggleThinkPremium(hdr){
+  const body=hdr.nextElementSibling;
+  const open=body.classList.toggle('show');
+  hdr.classList.toggle('open',open);
+}
 function addFinalBubble(html,sources,followups,type){const area=document.getElementById('msgs');if(!area)return;const a=curAg;const id='b'+Date.now();const d=document.createElement('div');d.className='msg a fi';d.id=id;d.innerHTML=`<div class="m-av" style="background:${a.c}12;border-color:${a.c}25;color:${a.c}">${AIC[a.id]}</div><div class="m-body"><div class="m-bbl" id="${id}-bbl">${html}</div></div>`;area.appendChild(d);appendMsgFooter(d.querySelector('.m-body'),id,sources,followups,_lastIntentType);scrollBot();}
 function appendMsgFooter(mbody,id,sources,followups,intentType){
-  if(!mbody)return;mbody.querySelectorAll('.src-badge,.followups,.m-actions,.m-time').forEach(e=>e.remove());
+  if(!mbody)return;mbody.querySelectorAll('.src-badge,.followups,.fup-typed-group,.m-actions,.m-time,.p3-nba-footer').forEach(e=>e.remove());
   const t=document.createElement('div');t.style.display='contents';
   const srcH=sources.length?`<button class="src-badge" onclick="openCtxFromSrc(event)">${sources.map(()=>`<span class="src-dot"></span>`).join('')} ${sources.length} source${sources.length>1?'s':''}</button>`:'';
-  // Use followups from response, fall back to workflow-specific, then agent default
+  // Use typed follow-ups from response if available, else fall back
   const fuList=(followups&&followups.length)?followups:(WORKFLOW_FOLLOWUPS[intentType]||getFups(curAg));
-  const fuH=fuList.length?`<div class="followups">${fuList.slice(0,4).map(f=>`<button class="fup" onclick="cfill('${f.replace(/'/g,"&#39;")}')">${SVG.chevR}${esc(f)}</button>`).join('')}</div>`:'';
+  const fuH=fuList.length?renderTypedFollowups(fuList):'';
   const actH=`<div class="m-actions"><button class="mac" id="mac-${id}" onclick="copyMsg('${id}')" aria-label="Copy">${SVG.copy}</button><button class="mac" onclick="fbk(true)" aria-label="Good">${SVG.thumbUp}</button><button class="mac" onclick="fbk(false)" aria-label="Poor">${SVG.thumbDn}</button></div>`;
   t.innerHTML=`<div class="m-time">${now()}</div>`+srcH+fuH+actH;mbody.appendChild(t);
 }
@@ -1887,7 +2919,14 @@ function appendMsgFooter(mbody,id,sources,followups,intentType){
 function openCtxFromSrc(e){_prevCtxFocus=e?.target;openCtx('sources');}
 function toggleThink(hdr){const b=hdr.nextElementSibling;const o=b.classList.toggle('show');hdr.classList.toggle('open',o);}
 function addErrBubble(msg){const area=document.getElementById('msgs');if(!area)return;const a=curAg;const d=document.createElement('div');d.className='msg a fi';d.innerHTML=`<div class="m-av" style="background:${a?.c}12;color:${a?.c}">${AIC[a?.id]||''}</div><div class="m-body"><div class="m-bbl" style="color:var(--rd);font-size:13px">${esc(msg)}</div></div>`;area.appendChild(d);scrollBot();}
-function showThinking(){const area=document.getElementById('msgs');if(!area)return null;const id='t'+Date.now();const d=document.createElement('div');d.id=id;d.className='fi';const lbl=mode==='think'?'Reasoning with ':mode==='build'?'Building with ':'Processing with ';d.innerHTML=`<div class="thinking-bar"><div class="spin"></div>${lbl}${curAg.n}…</div>`;area.appendChild(d);scrollBot();return id;}
+function showThinking(){
+  const area=document.getElementById('msgs');if(!area)return null;
+  const id='t'+Date.now();const d=document.createElement('div');d.id=id;d.className='fi';
+  const intelLabel=intelligenceMode==='thinking'?'Thinking deeply with ':(intelligenceMode==='fast'?'Processing with ':'Working with ');
+  const lbl=mode==='think'?'Reasoning with ':mode==='build'?'Building with ':intelLabel;
+  d.innerHTML=`<div class="thinking-bar"><div class="spin"></div>${lbl}${curAg.n}…</div>`;
+  area.appendChild(d);scrollBot();return id;
+}
 function removeThinking(id){if(id)document.getElementById(id)?.remove();}
 function getFups(ag){const m={kayla:['Show me a past paper question','What topics come up most in CXC?'],delroy:['Pests to watch this season?','How to apply for a RADA grant?'],nadine:['What are the visa requirements?','Hotels under US$150/night'],shamar:['How to handle price objections?','Write me a follow-up message'],sashoy:['Write a formal complaint letter','What are my consumer rights?'],bounty:['Make it more dancehall style','Create a social media calendar'],kemar:['How to file quarterly GCT?','Create a payment schedule'],rastajay:['Who is performing at Sumfest 2026?','History of Jamaican dancehall'],oneil:['What documents do I need?','Where is the nearest PICA office?'],biggs:['What licences do I need?','How to open a business bank account?']};return(m[ag.id]||[]).slice(0,2);}
 function scrollBot(){const o=document.getElementById('msgs-outer');if(o)o.scrollTop=o.scrollHeight;}
